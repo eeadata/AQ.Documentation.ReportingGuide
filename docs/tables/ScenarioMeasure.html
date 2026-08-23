@@ -251,26 +251,34 @@ It is not allowed to re-use MeasureGroupId in different ScenarioId (to avoid com
 <h2><a class="toc-backref" href="#id5" role="doc-backlink">Attribute details</a><a class="headerlink" href="#attribute-details" title="Link to this heading"></a></h2>
 <section id="sme-01-countrycode">
 <h3><a class="toc-backref" href="#id6" role="doc-backlink">SME_01 – CountryCode</a><a class="headerlink" href="#sme-01-countrycode" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ScenarioMeasure.html#sme-01-countrycode">View reference attribute</a>
+<strong>Content</strong></p>
 <p>Country or territory ISO2 code.</p>
 </section>
 <section id="sme-02-scenarioid">
 <h3><a class="toc-backref" href="#id7" role="doc-backlink">SME_02 – ScenarioId</a><a class="headerlink" href="#sme-02-scenarioid" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ScenarioMeasure.html#sme-02-scenarioid">View reference attribute</a>
+<strong>Content</strong></p>
 <p>Identifier of the scenario, given by data provider.</p>
 <p><strong>Remarks</strong></p>
 <p>It will be cross-checked against PlanScenario table.</p>
 </section>
 <section id="sme-03-scenariocategory">
 <h3><a class="toc-backref" href="#id8" role="doc-backlink">SME_03 – ScenarioCategory</a><a class="headerlink" href="#sme-03-scenariocategory" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ScenarioMeasure.html#sme-03-scenariocategory">View reference attribute</a>
+<strong>Content</strong></p>
 <p>Classification of the scenario (e.g., baseline, projection).</p>
 <p><strong>Remarks</strong></p>
 <p>ScenarioCategory: baseline or projection. It should be included in the composite PK in the next iteration of schema version.</p>
 </section>
 <section id="sme-04-measuregroupid">
 <h3><a class="toc-backref" href="#id9" role="doc-backlink">SME_04 – MeasureGroupId</a><a class="headerlink" href="#sme-04-measuregroupid" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ScenarioMeasure.html#sme-04-measuregroupid">View reference attribute</a>
+<strong>Content</strong></p>
 <p>Identifier of the pollution reduction for measure group, given by data provider.</p>
 <p><strong>Remarks</strong></p>
 <p>MeasureGroupId: distinct groups might contain one or more measures. For example, group 1 contains all the measures related to traffic, while group 2 contains all the measures related to industry. To the extreme, the group may correspond to one measure only; the same MeasureGroupId might be used for different scenarios, also - several MeasureGroupId might be declared for the same scenario.</p>
@@ -278,14 +286,18 @@ It is not allowed to re-use MeasureGroupId in different ScenarioId (to avoid com
 </section>
 <section id="sme-05-measuregrouppollutionreduction">
 <h3><a class="toc-backref" href="#id10" role="doc-backlink">SME_05 – MeasureGroupPollutionReduction</a><a class="headerlink" href="#sme-05-measuregrouppollutionreduction" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ScenarioMeasure.html#sme-05-measuregrouppollutionreduction">View reference attribute</a>
+<strong>Content</strong></p>
 <p>Reduction in air pollution concentration levels due to the applied group of measures.</p>
 <p><strong>Remarks</strong></p>
 <p>Sum of MeasureGroupAirPollutionReduction within ScenarioId should agree with the difference between value of AirPollutionLevel in the first AttainmentId and the value reported in PlanScenario as ScenarioAirPollutionLevel.</p>
 </section>
 <section id="sme-06-measurereductionassessmentmethodid">
 <h3><a class="toc-backref" href="#id11" role="doc-backlink">SME_06 – MeasureReductionAssessmentMethodId</a><a class="headerlink" href="#sme-06-measurereductionassessmentmethodid" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ScenarioMeasure.html#sme-06-measurereductionassessmentmethodid">View reference attribute</a>
+<strong>Content</strong></p>
 <p>Identifier of the assessment method - model - used in the scenario, given by data provider.</p>
 <p><strong>Remarks</strong></p>
 <p>AssessmentMethodId: the model/OBE used for producing the results for the measure group (also to be declared in the Model table). It may be cross-checked against Model table, also - indirectly - against ModellingResult table.</p>

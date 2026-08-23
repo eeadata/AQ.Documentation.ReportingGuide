@@ -63,12 +63,20 @@ Deletion of an existing record will be also possible via the Deletion attribute 
 
 ### CPL_01 – CountryCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/CompliancePlanLink.html#cpl-01-countrycode)
 **Content**
 
 Country or territory ISO2 code.
 
 ### CPL_02 – AttainmentId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/CompliancePlanLink.html#cpl-02-attainmentid)
 **Content**
 
 Identifier of the air quality compliance situation, given by data provider.
@@ -79,6 +87,10 @@ Several AttainmentIds can point to the same PlanId (e.g. the plan covers differe
 
 ### CPL_03 – PlanId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/CompliancePlanLink.html#cpl-03-planid)
 **Content**
 
 Identifier of the air quality plan, given by data provider.
@@ -89,6 +101,10 @@ It will be cross-checked against the PlanScenario table.
 
 ### CPL_04 – ScenarioId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/CompliancePlanLink.html#cpl-04-scenarioid)
 **Content**
 
 Identifier of the scenario, given by data provider.
@@ -99,6 +115,10 @@ ScenarioId, several scenarios can apply to the same PlanId (e.g. different pollu
 
 ### CPL_05 – SourceApportionmentId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/CompliancePlanLink.html#cpl-05-sourceapportionmentid)
 **Content**
 
 Identifier of the source apportionment, given by data provider.
@@ -161,6 +181,10 @@ Identifier of the air quality plan document given by data provider.
 
 ### CPL_12 – Deletion
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/CompliancePlanLink.html#cpl-12-deletion)
 **Content**
 
 Flag to indicate that this element must be deleted

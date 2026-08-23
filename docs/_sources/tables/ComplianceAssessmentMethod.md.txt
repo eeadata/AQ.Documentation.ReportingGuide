@@ -80,18 +80,30 @@ Deletion of an existing record is possible via the Deletion attribute (by report
 
 ### CAM_01 – CountryCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ComplianceAssessmentMethod.html#cam-01-countrycode)
 **Content**
 
 Country or territory ISO2 code.
 
 ### CAM_02 – ReportingYear
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ComplianceAssessmentMethod.html#cam-02-reportingyear)
 **Content**
 
 Year for which the data has been reported.
 
 ### CAM_03 – AssessmentRegimeId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ComplianceAssessmentMethod.html#cam-03-assessmentregimeid)
 **Content**
 
 Identifier of the air quality assessment regime, given by data provider.
@@ -102,12 +114,20 @@ It will be cross-checked against the AssessmentRegimeZone table.
 
 ### CAM_04 – DataAggregationProcessId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ComplianceAssessmentMethod.html#cam-04-dataaggregationprocessid)
 **Content**
 
 Identifier of the process used for aggregating air quality data into statistical values.
 
 ### CAM_05 – AssessmentMethodId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ComplianceAssessmentMethod.html#cam-05-assessmentmethodid)
 **Content**
 
 Identifier of the assessment method used for air quality evaluation, given by data provider.
@@ -118,24 +138,40 @@ Either SamplingPoint or Model/OBE, it will be cross-checked against the Sampling
 
 ### CAM_06 – PollutantId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ComplianceAssessmentMethod.html#cam-06-pollutantid)
 **Content**
 
 Code of the air pollutant for which the assessment is being conducted.
 
 ### CAM_07 – AssessmentType
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ComplianceAssessmentMethod.html#cam-07-assessmenttype)
 **Content**
 
 Classification of assessment methods into common types.
 
 ### CAM_08 – IsExceedance
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ComplianceAssessmentMethod.html#cam-08-isexceedance)
 **Content**
 
 Statement indicating whether pollution levels exceed environmental objectives.
 
 ### CAM_09 – DataCoverage
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ComplianceAssessmentMethod.html#cam-09-datacoverage)
 **Content**
 
 The proportion of the calendar year for which valid measurement data are available, expressed as a percentage.
@@ -146,6 +182,10 @@ One element of DQO (see Directive 2024/2881 Section B.
 
 ### CAM_10 – PollutionLevel
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ComplianceAssessmentMethod.html#cam-10-pollutionlevel)
 **Content**
 
 Measured or modeled concentration level of the air pollutant.
@@ -156,12 +196,20 @@ AirPollutionLevel must be reported for every AssessmentMethodId.
 
 ### CAM_11 – PollutionLevelAdjusted
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ComplianceAssessmentMethod.html#cam-11-pollutionleveladjusted)
 **Content**
 
 Adjusted concentration level of the air pollutant, accounting for specific corrections.
 
 ### CAM_12 – RelativeUncertaintyLimit
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ComplianceAssessmentMethod.html#cam-12-relativeuncertaintylimit)
 **Content**
 
 The maximum relative uncertaintyfor assessment method (given for measurement).
@@ -172,12 +220,20 @@ RelativeUncertaintyLimit must be reported for every AssessmentMethodId which ref
 
 ### CAM_13 – AssessmentMQI
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ComplianceAssessmentMethod.html#cam-13-assessmentmqi)
 **Content**
 
 Modelling Quality Indicator
 
 ### CAM_14 – CorrectionFlag
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ComplianceAssessmentMethod.html#cam-14-correctionflag)
 **Content**
 
 Correction factor for measured values applied (Y/N)
@@ -188,6 +244,10 @@ Y/N. Correction is a string/boolean to be used in order to certify that, in case
 
 ### CAM_15 – AttainmentId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ComplianceAssessmentMethod.html#cam-15-attainmentid)
 **Content**
 
 Identifier of the air quality compliance situation, given by data provider (preliminary reason level).
@@ -198,6 +258,10 @@ AttainmentId distinguishes each compliance situation. If there is no exceedance 
 
 ### CAM_16 – SRSId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ComplianceAssessmentMethod.html#cam-16-srsid)
 **Content**
 
 Identifier of the area representing spatial representativeness.
@@ -208,6 +272,10 @@ Identifier linking to either SPO representativeness or to exceedance extent.
 
 ### CAM_17 – PreliminaryReason
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ComplianceAssessmentMethod.html#cam-17-preliminaryreason)
 **Content**
 
 Initial justification or reasoning for reported exceedance levels.
@@ -218,6 +286,10 @@ This is crucial for distinguishing between different compliance situations in th
 
 ### CAM_18 – Deletion
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ComplianceAssessmentMethod.html#cam-18-deletion)
 **Content**
 
 Flag to indicate that this element and all related information must be deleted.

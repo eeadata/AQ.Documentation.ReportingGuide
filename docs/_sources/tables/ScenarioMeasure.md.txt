@@ -66,12 +66,20 @@ Records in ScenarioMeasure table which do not have any correspondence to records
 
 ### SME_01 – CountryCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ScenarioMeasure.html#sme-01-countrycode)
 **Content**
 
 Country or territory ISO2 code.
 
 ### SME_02 – ScenarioId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ScenarioMeasure.html#sme-02-scenarioid)
 **Content**
 
 Identifier of the scenario, given by data provider.
@@ -82,6 +90,10 @@ It will be cross-checked against PlanScenario table.
 
 ### SME_03 – ScenarioCategory
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ScenarioMeasure.html#sme-03-scenariocategory)
 **Content**
 
 Classification of the scenario (e.g., baseline, projection).
@@ -92,6 +104,10 @@ ScenarioCategory: baseline or projection. It should be included in the composite
 
 ### SME_04 – MeasureGroupId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ScenarioMeasure.html#sme-04-measuregroupid)
 **Content**
 
 Identifier of the pollution reduction for measure group, given by data provider.
@@ -104,6 +120,10 @@ It will be cross-checked against Measure table.
 
 ### SME_05 – MeasureGroupPollutionReduction
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ScenarioMeasure.html#sme-05-measuregrouppollutionreduction)
 **Content**
 
 Reduction in air pollution concentration levels due to the applied group of measures.
@@ -114,6 +134,10 @@ Sum of MeasureGroupAirPollutionReduction within ScenarioId should agree with the
 
 ### SME_06 – MeasureReductionAssessmentMethodId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ScenarioMeasure.html#sme-06-measurereductionassessmentmethodid)
 **Content**
 
 Identifier of the assessment method - model - used in the scenario, given by data provider.

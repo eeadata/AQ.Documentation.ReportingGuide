@@ -53,18 +53,30 @@ Records in SpatialRepresentativeness table which do not have any correspondence 
 
 ### SRS_01 – CountryCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SpatialRepresentativeness.html#srs-01-countrycode)
 **Content**
 
 Country or territory ISO2 code.
 
 ### SRS_02 – SRSId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SpatialRepresentativeness.html#srs-02-srsid)
 **Content**
 
 Identifier of the area representing the sampling point’s measurement spatial coverage or the extent of the exceedance, given by data provider.
 
 ### SRS_03 – SRSApplicationId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SpatialRepresentativeness.html#srs-03-srsapplicationid)
 **Content**
 
 Identifier pointing to the specific spatial representativeness given by data provider.
@@ -75,6 +87,10 @@ The same SRSId can have several SRSApplication_Id (e.g. one for the SPO represen
 
 ### SRS_04 – SRSApplication
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SpatialRepresentativeness.html#srs-04-srsapplication)
 **Content**
 
 Application of spatial representativeness (SPO representativeness or the exceedance extent).
@@ -85,12 +101,20 @@ New code list (SPO representativeness area, exceedance extent area).
 
 ### SRS_05 – ResultEncoding
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SpatialRepresentativeness.html#srs-05-resultencoding)
 **Content**
 
 Encoding method used for model results (`internal` or `external`).
 
 ### SRS_06 – RepresentativenessAssessmentMethodId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SpatialRepresentativeness.html#srs-06-representativenessassessmentmethodid)
 **Content**
 
 Identifier of the assessment method (model) used for defining the area (either representativeness or extent), given by data provider.

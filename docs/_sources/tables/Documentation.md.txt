@@ -49,24 +49,40 @@ Records in Document table which do not have any correspondence (via DocumentId) 
 
 ### DOC_01 – CountryCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Documentation.html#doc-01-countrycode)
 **Content**
 
 Country or territory ISO2 code.
 
 ### DOC_02 – DataTable
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Documentation.html#doc-02-datatable)
 **Content**
 
 Table name of origin.
 
 ### DOC_03 – DocumentType
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Documentation.html#doc-03-documenttype)
 **Content**
 
 Document content type.
 
 ### DOC_04 – DocumentId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Documentation.html#doc-04-documentid)
 **Content**
 
 Identifier of the document given by data provider.
@@ -79,6 +95,10 @@ Attached document PDF.
 
 ### DOC_06 – DocumentOriginalURL
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Documentation.html#doc-06-documentoriginalurl)
 **Content**
 
 URL of the attached document PDF.

@@ -57,12 +57,20 @@ Records in PollutionLevelAdjustment table which do not have any correspondence t
 
 ### ADJ_01 – CountryCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/PollutionLevelAdjustment.html#adj-01-countrycode)
 **Content**
 
 Country or territory ISO2 code.
 
 ### ADJ_02 – AttainmentId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/PollutionLevelAdjustment.html#adj-02-attainmentid)
 **Content**
 
 Identifier of the air quality compliance situation, given by data provider.
@@ -73,12 +81,20 @@ It will be cross-checked against the ComplianceAssessmentMethod table.
 
 ### ADJ_03 – AdjustmentSource
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/PollutionLevelAdjustment.html#adj-03-adjustmentsource)
 **Content**
 
 Description of the source being adjusted (e.g., sea spray, volcanic activity).
 
 ### ADJ_04 – AdjustmentAssessmentMethodId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/PollutionLevelAdjustment.html#adj-04-adjustmentassessmentmethodid)
 **Content**
 
 Identifier of the method - model - used for deduction assessment, given by data provider.
@@ -91,6 +107,10 @@ It will be cross-checked against the Model table, also - indirectly - against th
 
 ### ADJ_05 – AdjustmentDocumentId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/PollutionLevelAdjustment.html#adj-05-adjustmentdocumentid)
 ## Example
 
 | Attribute Code | Attribute Name | Example | SQL DB Data Type | ReportNet3 Data Type | PK | CL |

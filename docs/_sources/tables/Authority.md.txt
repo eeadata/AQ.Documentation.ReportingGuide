@@ -61,12 +61,20 @@ Records in Authority table which have AuthorityStatus as inactive for 3 consecut
 
 ### AUT_01 – CountryCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Authority.html#aut-01-countrycode)
 **Content**
 
 Country or territory ISO2 code.
 
 ### AUT_02 – AuthorityInstanceId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Authority.html#aut-02-authorityinstanceid)
 **Content**
 
 Unique identifier depending on authority instance, e.g. ZoneId or NUTS code.
@@ -79,12 +87,20 @@ It will be cross-checked against ARZ, STA, SPO or MOD table depending on the ins
 
 ### AUT_03 – AuthorityRole
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Authority.html#aut-03-authorityrole)
 **Content**
 
 A general object identifier or classification (topic e.g. reporting, assessment etc.).
 
 ### AUT_04 – Email
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Authority.html#aut-04-email)
 **Content**
 
 Email address of the contact person.
@@ -99,30 +115,50 @@ In other cases the attribute should be filled in as "Not Reported" or with organ
 
 ### AUT_05 – AuthorityInstance
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Authority.html#aut-05-authorityinstance)
 **Content**
 
 Name of the authority instance: zone, network, nuts0, nuts1, nuts2, nuts3, station, SPO, etc.
 
 ### AUT_06 – AuthorityName
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Authority.html#aut-06-authorityname)
 **Content**
 
 Name of the institute or organization.
 
 ### AUT_07 – AuthorityURL
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Authority.html#aut-07-authorityurl)
 **Content**
 
 Website URL of the institute.
 
 ### AUT_08 – AuthorityAddress
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Authority.html#aut-08-authorityaddress)
 **Content**
 
 Address of the institute.
 
 ### AUT_09 – PersonName
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Authority.html#aut-09-personname)
 **Content**
 
 Name of the contact person in the authority or institute.
@@ -137,6 +173,10 @@ In other cases the attribute should be filled in as "Not Reported".
 
 ### AUT_10 – AuthorityStatus
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Authority.html#aut-10-authoritystatus)
 **Content**
 
 Status or classification of the authority (e.g. active/inactive).

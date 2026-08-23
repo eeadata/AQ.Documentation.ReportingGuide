@@ -88,18 +88,30 @@ Records in AssessmentRegimeZone table which do not have any correspondence to re
 
 ### ARZ_01 – CountryCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/AssessmentRegimeZone.html#arz-01-countrycode)
 **Content**
 
 Country or territory ISO2 code.
 
 ### ARZ_02 – AssessmentRegimeId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/AssessmentRegimeZone.html#arz-02-assessmentregimeid)
 **Content**
 
 Identifier of the air quality assessment regime, given by data provider.
 
 ### ARZ_03 – ZoneId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/AssessmentRegimeZone.html#arz-03-zoneid)
 **Content**
 
 Identifier of the air quality zone, given by data provider.
@@ -110,66 +122,110 @@ It will be cross-checked against the ZoneGeometry table.
 
 ### ARZ_04 – ZoneNationalCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/AssessmentRegimeZone.html#arz-04-zonenationalcode)
 **Content**
 
 Unique identifier of the air quality zone, given by data provider.
 
 ### ARZ_05 – ZoneArea
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/AssessmentRegimeZone.html#arz-05-zonearea)
 **Content**
 
 Total area of the air quality zone.
 
 ### ARZ_06 – ZoneCategory
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/AssessmentRegimeZone.html#arz-06-zonecategory)
 **Content**
 
 Category of the air quality zone (aq zone or nuts) - new code list.
 
 ### ARZ_07 – ZoneType
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/AssessmentRegimeZone.html#arz-07-zonetype)
 **Content**
 
 Type of air quality zone (e.g., agglomeration and non-agglomeration).
 
 ### ARZ_08 – ZoneName
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/AssessmentRegimeZone.html#arz-08-zonename)
 **Content**
 
 Geographical name of the air quality zone.
 
 ### ARZ_09 – PollutantId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/AssessmentRegimeZone.html#arz-09-pollutantid)
 **Content**
 
 Code of the air pollutant for which the assessment is being conducted.
 
 ### ARZ_10 – ProtectionTarget
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/AssessmentRegimeZone.html#arz-10-protectiontarget)
 **Content**
 
 Protection target for air quality (e.g., human health, vegetation).
 
 ### ARZ_11 – ObjectiveType
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/AssessmentRegimeZone.html#arz-11-objectivetype)
 **Content**
 
 Type of environmental objective related to air quality assessment.
 
 ### ARZ_12 – ReportingMetric
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/AssessmentRegimeZone.html#arz-12-reportingmetric)
 **Content**
 
 Metric corresponding to the standard (objective type).
 
 ### ARZ_13 – AssessmentThresholdExceedance
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/AssessmentRegimeZone.html#arz-13-assessmentthresholdexceedance)
 **Content**
 
 Status indicating whether an assessment threshold has been exceeded.
 
 ### ARZ_14 – PostponementYear
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/AssessmentRegimeZone.html#arz-14-postponementyear)
 **Content**
 
 Year of postponement applied to the air quality zone, pollutant, target, objective and metric/aggregation.
@@ -181,6 +237,10 @@ Leaving this attribute blank will mean that no postponement does apply.
 
 ### ARZ_15 – FixedMeasurementReduction
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/AssessmentRegimeZone.html#arz-15-fixedmeasurementreduction)
 **Content**
 
 Use of indicative measurements and/or modelling to reduce fixed measurement network.
@@ -193,24 +253,40 @@ FixedSPOReduction relates to the reduction of the number of sampling points for 
 
 ### ARZ_16 – ZoneResidentPopulationYear
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/AssessmentRegimeZone.html#arz-16-zoneresidentpopulationyear)
 **Content**
 
 Reference year for the resident population data in the zone.
 
 ### ARZ_17 – ZoneResidentPopulation
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/AssessmentRegimeZone.html#arz-17-zoneresidentpopulation)
 **Content**
 
 Number of people residing within the air quality zone.
 
 ### ARZ_18 – ClassificationYear
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/AssessmentRegimeZone.html#arz-18-classificationyear)
 **Content**
 
 The year of the last classification of the pollution level in the zone.
 
 ### ARZ_19 – ClassificationDocumentId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/AssessmentRegimeZone.html#arz-19-classificationdocumentid)
 **Content**
 
 Identifier of the report detailing the classification procedure given by data provider.

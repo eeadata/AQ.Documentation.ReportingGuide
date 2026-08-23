@@ -70,12 +70,20 @@ In case where the same, e.g. DataQualityDocumentId, was used for all records and
 
 ### SPP_01 – CountryCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-01-countrycode)
 **Content**
 
 Country or territory ISO2 code.
 
 ### SPP_02 – ProcessId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-02-processid)
 **Content**
 
 Identifier of the sampling process, given by data provider.
@@ -86,6 +94,10 @@ The same ProcessId can be re-used for the same equipment configurations under di
 
 ### SPP_03 – AssessmentMethodId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-03-assessmentmethodid)
 **Content**
 
 Identifier of the assessment method (sampling point) given by data provider.
@@ -97,6 +109,10 @@ The same sampling point can be re-opened, also with the same ProcessId, by addin
 
 ### SPP_04 – ProcessActivityBegin
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-04-processactivitybegin)
 **Content**
 
 Start time of the measurement process.
@@ -107,60 +123,100 @@ If there is more than one ProcessId within the same AssessmentMethodId, then Pro
 
 ### SPP_05 – ProcessActivityEnd
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-05-processactivityend)
 **Content**
 
 End time of the measurement process.
 
 ### SPP_06 – PollutantId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-06-pollutantid)
 **Content**
 
 Code of the air pollutant being measured, as per Data Dictionary standards.
 
 ### SPP_07 – MeasurementType
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-07-measurementtype)
 **Content**
 
 Classification of measurement methods into generic types.
 
 ### SPP_08 – Method
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-08-method)
 **Content**
 
 Specific method used for measuring air pollutants.
 
 ### SPP_09 – Equipment
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-09-equipment)
 **Content**
 
 Equipment used for air pollutant measurement.
 
 ### SPP_10 – AnalyticalTechnique
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-10-analyticaltechnique)
 **Content**
 
 Analytical technique used for measuring pollutants.
 
 ### SPP_11 – EquivalenceDemonstrated
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-11-equivalencedemonstrated)
 **Content**
 
 Status of equivalence demonstration according to regulatory requirements.
 
 ### SPP_12 – DataQualityDocumentId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-12-dataqualitydocumentid)
 **Content**
 
 Identifier of the Quality Assurance report given by data provider.
 
 ### SPP_13 – EquivalenceDemonstrationDocumentId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-13-equivalencedemonstrationdocumentid)
 **Content**
 
 Identifier of the Equivalence demonstration report given by data provider.
 
 ### SPP_14 – ProcessDocumentId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-14-processdocumentid)
 **Content**
 
 Identifier of the documentation on process and data quality given by data provider.

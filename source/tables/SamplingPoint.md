@@ -68,6 +68,10 @@ SamplingPoint without both active SamplingProcess active SamplingPointLocation a
 
 ### SPO_01 – CountryCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPoint.html#spo-01-countrycode)
 **Content**
 
 Country or territory ISO2 code.
@@ -75,6 +79,10 @@ Country or territory ISO2 code.
 
 ### SPO_02 – AssessmentMethodId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPoint.html#spo-02-assessmentmethodid)
 **Content**
 
 Identifier of the assessment method (sampling point), given by data provider.
@@ -87,6 +95,10 @@ The same sampling point (AssessmentMethodId) can be re-open (also with the same 
 
 ### SPO_03 – SamplingPointReferenceId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPoint.html#spo-03-samplingpointreferenceid)
 **Content**
 
 Reference identifier of the assessment method (sampling point), either re-used or given by data provider following strict rules.
@@ -97,6 +109,10 @@ Following rules of SPO reference code, unique within CountryCode reported and it
 
 ### SPO_04 – PollutantId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPoint.html#spo-04-pollutantid)
 **Content**
 
 Code of the air pollutant being measured, as per Data Dictionary standards.
@@ -107,6 +123,10 @@ Only one for the same AssessmentMethodId/SamplingPointReferenceId.
 
 ### SPO_05 – StationEoICode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPoint.html#spo-05-stationeoicode)
 **Content**
 
 EoI (Exchange of Information) code of the air quality measurement station, as in AirBase, either re-used or given by data provider following strict rules.

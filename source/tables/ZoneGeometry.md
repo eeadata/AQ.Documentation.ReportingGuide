@@ -71,18 +71,30 @@ Records in the ZoneGeometry table (and subsequently in ZoneGeometryGrid) which d
 
 ### ZGE_01 – CountryCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ZoneGeometry.html#zge-01-countrycode)
 **Content**
 
 Country or territory ISO2 code.
 
 ### ZGE_02 – ZoneId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ZoneGeometry.html#zge-02-zoneid)
 **Content**
 
 Identifier of the air quality zone, given by data provider.
 
 ### ZGE_03 – ZoneGeometryGeoJson
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/ZoneGeometry.html#zge-03-zonegeometrygeojson)
 **Content**
 
 Geospatial representation of the air quality zone (e.g. polygon geometry).

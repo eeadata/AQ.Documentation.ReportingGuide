@@ -61,7 +61,7 @@ Deletion of records from ObservationMeasurementResult can be achieved by re-subm
 | OMP_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  |
 | OMP_02 | AssessmentMethodId | varchar(50) | string | PK |  |  |
 | OMP_03 | Start | datetime | datetime | PK |  |  |
-| OMP_4 | LowerRange | int | numeric | PK |  |  |
+| OMP_04 | LowerRange | int | numeric | PK |  |  |
 | OMP_05 | PollutantId | int | numeric |  | [pollutant](https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view) |  |
 | OMP_06 | End | datetime | datetime |  |  |  |
 | OMP_07 | Value | decimal(10,2) | numeric |  |  |  |
@@ -78,13 +78,13 @@ Deletion of records from ObservationMeasurementResult can be achieved by re-subm
 
 ## Attribute details
 
-### PNSD_01 – CountryCode
+### OMP_01 – CountryCode
 
 **Content**
 
 Country or territory ISO2 code.
 
-### PNSD_02 – AssessmentMethodId
+### OMP_02 – AssessmentMethodId
 
 **Content**
 
@@ -94,7 +94,7 @@ Identifier of the assessment method (sampling point), given by data provider.
 
 It will be cross-checked against the SamplingPoint table.
 
-### PNSD_03 – Start
+### OMP_03 – Start
 
 **Content**
 
@@ -104,13 +104,13 @@ Start date and time of the measurement period.
 
 Start must be provided with time zone information.
 
-### PNSD_04 – LowerRange
+### OMP_04 – LowerRange
 
 **Content**
 
 Lower range of PNSD bin.
 
-### PNSD_05 – PollutantId
+### OMP_05 – PollutantId
 
 **Content**
 
@@ -120,73 +120,73 @@ Code of the air pollutant being measured, as per Data Dictionary standards.
 
 End must be provided with time zone information.
 
-### PNSD_06 – End
+### OMP_06 – End
 
 **Content**
 
 End date and time of the measurement period.
 
-### PNSD_07 – Value
+### OMP_07 – Value
 
 **Content**
 
 Measured concentration or level of the air pollutant.
 
-### PNSD_08 – Unit
+### OMP_08 – Unit
 
 **Content**
 
  Unit of measurement for the air pollution level (e.g., µg/m³).
 
-### PNSD_09 – Validity
+### OMP_09 – Validity
 
 **Content**
 
 Indicator of whether the measurement data is valid or not.
 
-### PNSD_10 – Verification
+### OMP_10 – Verification
 
 **Content**
 
 Information based on verification flags found in reported time series.
 
-### PNSD_11 – TimeResolution
+### OMP_11 – TimeResolution
 
 **Content**
 
 Time resolution of the reported measurement observations (e.g., hourly, daily).
 
-### PNSD_12 – ResultTime
+### OMP_12 – ResultTime
 
 **Content**
 
 Time at which the result was generated or recorded.
 
-### PNSD_13 – UpperRange
+### OMP_13 – UpperRange
 
 **Content**
 
 Upper range of PNSD bin.
 
-### PNSD_14 – Temperature
+### OMP_14 – Temperature
 
 **Content**
 
-Temperature measured along tihe PNSD (deg Celsius).
+Temperature measured along the PNSD (deg Celsius).
 
-### PNSD_15 – RelativeHumidity
-
-**Content**
-
-Relative humidity measured along tihe PNSD (%).
-
-### PNSD_16 – Pressure
+### OMP_15 – RelativeHumidity
 
 **Content**
 
-Pressure measured along tihe PNSD (hPa).
+Relative humidity measured along the PNSD (%).
 
-### PNSD_17 – Inversion
+### OMP_16 – Pressure
+
+**Content**
+
+Pressure measured along the PNSD (hPa).
+
+### OMP_17 – Inversion
 
 **Content**
 

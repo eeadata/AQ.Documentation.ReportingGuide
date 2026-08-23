@@ -68,18 +68,30 @@ In case where the LocationBegin was reported wrongly and/or the corresponding re
 
 ### SPL_01 – CountryCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPointLocation.html#spl-01-countrycode)
 **Content**
 
 Country or territory ISO2 code.
 
 ### SPL_02 – AssessmentMethodId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPointLocation.html#spl-02-assessmentmethodid)
 **Content**
 
 Identifier of the assessment method (sampling point), given by data provider.
 
 ### SPL_03 – LocationBegin
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPointLocation.html#spl-03-locationbegin)
 **Content**
 
 Start time of the location characteristic(s).
@@ -90,12 +102,20 @@ The permissible modifications in the location characteristics will be verified b
 
 ### SPL_04 – LocationEnd
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPointLocation.html#spl-04-locationend)
 **Content**
 
 End time of the location characteristic(s).
 
 ### SPL_05 – StationArea
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPointLocation.html#spl-05-stationarea)
 **Content**
 
 Classification of the air quality measurement station’s area (urban, suburban, rural, etc.).
@@ -106,6 +126,10 @@ A change in station area implies closing the associated sampling points by endin
 
 ### SPL_06 – SamplingPointCategory
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPointLocation.html#spl-06-samplingpointcategory)
 **Content**
 
 Intention or reason for placing sampling point.
@@ -120,6 +144,10 @@ Potential categories: traffic, background, industrial, port, airport, residentia
 
 ### SPL_07 – Hotspot
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPointLocation.html#spl-07-hotspot)
 **Content**
 
 Indicator if the measurement site is considered as a hotspot.
@@ -132,6 +160,10 @@ Hotspot relates to the provisions of the recasted Air Quality Directive 2024/288
 
 ### SPL_08 – Supersite
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPointLocation.html#spl-08-supersite)
 **Content**
 
 Indicator if the measurement site is classified as a "Super Site" for advanced monitoring.
@@ -142,42 +174,70 @@ Y/N.
 
 ### SPL_09 – Latitude
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPointLocation.html#spl-09-latitude)
 **Content**
 
 Latitude coordinate of the air quality station location (decimal degrees).
 
 ### SPL_10 – Longitude
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPointLocation.html#spl-10-longitude)
 **Content**
 
 Longitude coordinate of the air quality station location (decimal degrees).
 
 ### SPL_11 – Altitude
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPointLocation.html#spl-11-altitude)
 **Content**
 
 Altitude of the air quality station location in meters above sea level.
 
 ### SPL_12 – InletHeight
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPointLocation.html#spl-12-inletheight)
 **Content**
 
 Height of the sampling inlet where air quality measurements are taken, in meters.
 
 ### SPL_13 – BuildingDistance
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPointLocation.html#spl-13-buildingdistance)
 **Content**
 
 Horizontal distance from the sampling inlet to the nearest building, in meters.
 
 ### SPL_14 – KerbDistance
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPointLocation.html#spl-14-kerbdistance)
 **Content**
 
 Horizontal distance from the sampling inlet to the nearest road kerb, in meters.
 
 ### SPL_15 – EmissionSourceDistance
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingPointLocation.html#spl-15-emissionsourcedistance)
 **Content**
 
 Horizontal distance from the main emission source, in meters.

@@ -61,36 +61,60 @@ Records in SourceApportionment table which do not have any correspondence to Pla
 
 ### SAP_01 – CountryCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SourceApportionment.html#sap-01-countrycode)
 **Content**
 
 Country or territory ISO2 code.
 
 ### SAP_02 – SourceApportionmentId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SourceApportionment.html#sap-02-sourceapportionmentid)
 **Content**
 
 Identifier of the source apportionment, given by data provider.
 
 ### SAP_03 – ContributionType
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SourceApportionment.html#sap-03-contributiontype)
 **Content**
 
 Type of contribution (e.g. background, increment).
 
 ### SAP_04 – SpatialScale 
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SourceApportionment.html#sap-04-spatialscale)
 **Content**
 
 Geographical scope of the contribution (e.g., urban, local, regional, national).
 
 ### SAP_05 – SourceSector
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SourceApportionment.html#sap-05-sourcesector)
 **Content**
 
 The sector responsible for emissions (e.g., traffic, industry, residential heating).
 
 ### SAP_06 – PollutantId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SourceApportionment.html#sap-06-pollutantid)
 **Content**
 
 Code of the air pollutant for which the contribution is being assessed.
@@ -101,6 +125,10 @@ AirPollutantCode: must correspond to the AirPollutantCode of the AttainmentId.
 
 ### SAP_07 – Contribution
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SourceApportionment.html#sap-07-contribution)
 **Content**
 
 Estimated contribution of the specified source sector to air pollution levels [%].
@@ -111,6 +139,10 @@ The value is understood as applicable to AirPollutionLevel adjusted for natural 
 
 ### SAP_08 – SourceApportionmentDocumentId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SourceApportionment.html#sap-08-sourceapportionmentdocumentid)
 **Content**
 
 Identifier of the documentation on source apportionment.

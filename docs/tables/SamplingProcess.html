@@ -324,19 +324,25 @@ In case where the same, e.g. DataQualityDocumentId, was used for all records and
 <h2><a class="toc-backref" href="#id5" role="doc-backlink">Attribute details</a><a class="headerlink" href="#attribute-details" title="Link to this heading"></a></h2>
 <section id="spp-01-countrycode">
 <h3><a class="toc-backref" href="#id6" role="doc-backlink">SPP_01 – CountryCode</a><a class="headerlink" href="#spp-01-countrycode" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-01-countrycode">View reference attribute</a>
+<strong>Content</strong></p>
 <p>Country or territory ISO2 code.</p>
 </section>
 <section id="spp-02-processid">
 <h3><a class="toc-backref" href="#id7" role="doc-backlink">SPP_02 – ProcessId</a><a class="headerlink" href="#spp-02-processid" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-02-processid">View reference attribute</a>
+<strong>Content</strong></p>
 <p>Identifier of the sampling process, given by data provider.</p>
 <p><strong>Remarks</strong></p>
 <p>The same ProcessId can be re-used for the same equipment configurations under different sampling points (AssessmentMethodId).</p>
 </section>
 <section id="spp-03-assessmentmethodid">
 <h3><a class="toc-backref" href="#id8" role="doc-backlink">SPP_03 – AssessmentMethodId</a><a class="headerlink" href="#spp-03-assessmentmethodid" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-03-assessmentmethodid">View reference attribute</a>
+<strong>Content</strong></p>
 <p>Identifier of the assessment method (sampling point) given by data provider.</p>
 <p><strong>Remarks</strong></p>
 <p>A sampling point (AssessmentMethodId) can be closed (set as inactive) by ending the ProcessId (specifying ProcessActivityEnd).
@@ -344,59 +350,81 @@ The same sampling point can be re-opened, also with the same ProcessId, by addin
 </section>
 <section id="spp-04-processactivitybegin">
 <h3><a class="toc-backref" href="#id9" role="doc-backlink">SPP_04 – ProcessActivityBegin</a><a class="headerlink" href="#spp-04-processactivitybegin" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-04-processactivitybegin">View reference attribute</a>
+<strong>Content</strong></p>
 <p>Start time of the measurement process.</p>
 <p><strong>Remarks</strong></p>
 <p>If there is more than one ProcessId within the same AssessmentMethodId, then ProcessActivityBegin - ProcessActivityEnd should not overlap within the same AssessmentMethodId.</p>
 </section>
 <section id="spp-05-processactivityend">
 <h3><a class="toc-backref" href="#id10" role="doc-backlink">SPP_05 – ProcessActivityEnd</a><a class="headerlink" href="#spp-05-processactivityend" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-05-processactivityend">View reference attribute</a>
+<strong>Content</strong></p>
 <p>End time of the measurement process.</p>
 </section>
 <section id="spp-06-pollutantid">
 <h3><a class="toc-backref" href="#id11" role="doc-backlink">SPP_06 – PollutantId</a><a class="headerlink" href="#spp-06-pollutantid" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-06-pollutantid">View reference attribute</a>
+<strong>Content</strong></p>
 <p>Code of the air pollutant being measured, as per Data Dictionary standards.</p>
 </section>
 <section id="spp-07-measurementtype">
 <h3><a class="toc-backref" href="#id12" role="doc-backlink">SPP_07 – MeasurementType</a><a class="headerlink" href="#spp-07-measurementtype" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-07-measurementtype">View reference attribute</a>
+<strong>Content</strong></p>
 <p>Classification of measurement methods into generic types.</p>
 </section>
 <section id="spp-08-method">
 <h3><a class="toc-backref" href="#id13" role="doc-backlink">SPP_08 – Method</a><a class="headerlink" href="#spp-08-method" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-08-method">View reference attribute</a>
+<strong>Content</strong></p>
 <p>Specific method used for measuring air pollutants.</p>
 </section>
 <section id="spp-09-equipment">
 <h3><a class="toc-backref" href="#id14" role="doc-backlink">SPP_09 – Equipment</a><a class="headerlink" href="#spp-09-equipment" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-09-equipment">View reference attribute</a>
+<strong>Content</strong></p>
 <p>Equipment used for air pollutant measurement.</p>
 </section>
 <section id="spp-10-analyticaltechnique">
 <h3><a class="toc-backref" href="#id15" role="doc-backlink">SPP_10 – AnalyticalTechnique</a><a class="headerlink" href="#spp-10-analyticaltechnique" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-10-analyticaltechnique">View reference attribute</a>
+<strong>Content</strong></p>
 <p>Analytical technique used for measuring pollutants.</p>
 </section>
 <section id="spp-11-equivalencedemonstrated">
 <h3><a class="toc-backref" href="#id16" role="doc-backlink">SPP_11 – EquivalenceDemonstrated</a><a class="headerlink" href="#spp-11-equivalencedemonstrated" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-11-equivalencedemonstrated">View reference attribute</a>
+<strong>Content</strong></p>
 <p>Status of equivalence demonstration according to regulatory requirements.</p>
 </section>
 <section id="spp-12-dataqualitydocumentid">
 <h3><a class="toc-backref" href="#id17" role="doc-backlink">SPP_12 – DataQualityDocumentId</a><a class="headerlink" href="#spp-12-dataqualitydocumentid" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-12-dataqualitydocumentid">View reference attribute</a>
+<strong>Content</strong></p>
 <p>Identifier of the Quality Assurance report given by data provider.</p>
 </section>
 <section id="spp-13-equivalencedemonstrationdocumentid">
 <h3><a class="toc-backref" href="#id18" role="doc-backlink">SPP_13 – EquivalenceDemonstrationDocumentId</a><a class="headerlink" href="#spp-13-equivalencedemonstrationdocumentid" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-13-equivalencedemonstrationdocumentid">View reference attribute</a>
+<strong>Content</strong></p>
 <p>Identifier of the Equivalence demonstration report given by data provider.</p>
 </section>
 <section id="spp-14-processdocumentid">
 <h3><a class="toc-backref" href="#id19" role="doc-backlink">SPP_14 – ProcessDocumentId</a><a class="headerlink" href="#spp-14-processdocumentid" title="Link to this heading"></a></h3>
-<p><strong>Content</strong></p>
+<p><strong>Reference</strong></p>
+<p><a class="reference external" href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/SamplingProcess.html#spp-14-processdocumentid">View reference attribute</a>
+<strong>Content</strong></p>
 <p>Identifier of the documentation on process and data quality given by data provider.</p>
 </section>
 </section>

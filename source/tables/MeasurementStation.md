@@ -63,12 +63,20 @@ Station without active sampling points will be flagged for deletion in the refer
 
 ### STA_01 – CountryCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/MeasurementStation.html#sta-01-countrycode)
 **Content**
 
 Country or territory ISO2 code.
 
 ### STA_02 – StationEoICode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/MeasurementStation.html#sta-02-stationeoicode)
 **Content**
 
 EoI (Exchange of Information) code of the air quality measurement station, as in AirBase, either re-used or given by data provider following strict rules.
@@ -87,24 +95,40 @@ The same Station can become active again if there are new active sampling points
 
 ### STA_03 – NetworkId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/MeasurementStation.html#sta-03-networkid)
 **Content**
 
 Identifier of the air quality network, given by data provider.
 
 ### STA_04 – NetworkName
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/MeasurementStation.html#sta-04-networkname)
 **Content**
 
 Name of the air quality measurement network, given by data provider.
 
 ### STA_05 – NetworkOrganisationalLevel
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/MeasurementStation.html#sta-05-networkorganisationallevel)
 **Content**
 
 Level of administration or organization responsible for the air quality network (national, regional, local).
 
 ### STA_06 – Timezone
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/MeasurementStation.html#sta-06-timezone)
 **Content**
 
 Time zone in which air quality measurements and statistics are recorded.
@@ -117,18 +141,30 @@ If TimeZone is modified, all statistics will be recalculated accordingly.
 
 ### STA_07 – StationNationalCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/MeasurementStation.html#sta-07-stationnationalcode)
 **Content**
 
 National code of the air quality measurement station, given by data provider.
 
 ### STA_08 – StationName
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/MeasurementStation.html#sta-08-stationname)
 **Content**
 
 Name of the air quality measurement station.
 
 ### STA_09 – NetworkDocumentId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/MeasurementStation.html#sta-09-networkdocumentid)
 **Content**
 
 Identifier of the documentation on network and station.

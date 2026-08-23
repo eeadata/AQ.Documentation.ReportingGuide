@@ -71,24 +71,40 @@ Keep in mind that authorities responsible for establishing plans and for reporti
 
 ### PSC_01 – CountryCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/PlanScenario.html#psc-01-countrycode)
 **Content**
 
 Country or territory ISO2 code.
 
 ### PSC_02 – PlanId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/PlanScenario.html#psc-02-planid)
 **Content**
 
 Identifier of the air quality plan, given by data provider.
 
 ### PSC_03 – ScenarioId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/PlanScenario.html#psc-03-scenarioid)
 **Content**
 
 Identifier of the scenario, given by data provider.
 
 ### PSC_04 – ScenarioCategory
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/PlanScenario.html#psc-04-scenariocategory)
 **Content**
 
 Classification of the scenario (e.g., baseline, projection).
@@ -99,12 +115,20 @@ ScenarioCategory: reference, baseline or projection. It should be included in th
 
 ### PSC_05 – ScenarioNationalCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/PlanScenario.html#psc-05-scenarionationalcode)
 **Content**
 
 Unique local code assigned to the evaluation scenario by the data provider.
 
 ### PSC_06 – PollutantId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/PlanScenario.html#psc-06-pollutantid)
 **Content**
 
 Code of the air pollutant being considered in the scenario.
@@ -115,6 +139,10 @@ AirPollutantCode: must correspond to the AirPollutantCode of the AttainmentId.
 
 ### PSC_07 – DataAggregationProcessId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/PlanScenario.html#psc-07-dataaggregationprocessid)
 **Content**
 
 Identifier for the process used to aggregate air quality data in the scenario.
@@ -125,22 +153,38 @@ DataAggregationProcessId: the data aggregation used for the scenario; it must co
 
 ### PSC_08 – ScenarioYear
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/PlanScenario.html#psc-08-scenarioyear)
 **Content**
 
 The calendar year for which the scenario has been modeled.
 
 ### PSC_09 – ScenarioPollutionLevel
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/PlanScenario.html#psc-09-scenariopollutionlevel)
 **Content**
 
 Estimated air pollution level in the scenario year.
 
 ### PSC_10 – ExposedPopulation
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/PlanScenario.html#psc-10-exposedpopulation)
 **Content**
 
 ### PSC_11 – ScenarioAssessmentMethodId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/PlanScenario.html#psc-11-scenarioassessmentmethodid)
 **Content**
 
 Identifier of the assessment method - model - used in the scenario, given by data provider.

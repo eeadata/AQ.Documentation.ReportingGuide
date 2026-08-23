@@ -71,48 +71,80 @@ Deletion of an existing record will be possible via the Deletion attribute (by r
 
 ### MEA_01 – CountryCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Measure.html#mea-01-countrycode)
 **Content**
 
 Country or territory ISO2 code.
 
 ### MEA_02 – MeasureGroupId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Measure.html#mea-02-measuregroupid)
 **Content**
 
 Identifier of the pollution reduction for measure group, given by data provider.
 
 ### MEA_03 – MeasureId
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Measure.html#mea-03-measureid)
 **Content**
 
 Identifier of the pollution reduction measure, given by data provider.
 
 ### MEA_04 – MeasureNationalCode
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Measure.html#mea-04-measurenationalcode)
 **Content**
 
 Unique local code assigned to the measure by the data provider.
 
 ### MEA_05 – MeasureName
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Measure.html#mea-05-measurename)
 **Content**
 
 Name or title of the pollution reduction measure.
 
 ### MEA_06 – MeasureClassification
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Measure.html#mea-06-measureclassification)
 **Content**
 
 Classification of the measure based on regulatory categories.
 
 ### MEA_07 – MeasureType
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Measure.html#mea-07-measuretype)
 **Content**
 
 Description of the high-level implementation mechanism or scope of the measure.
 
 ### MEA_08 – SourceSector
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Measure.html#mea-08-sourcesector)
 **Content**
 
 Economic or activity sector targeted by the measure (e.g., transport, energy, industry).
@@ -123,6 +155,10 @@ It can be tested against the SourceSector of SourceApportionment which was used 
 
 ### MEA_09 – SpatialScale
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Measure.html#mea-09-spatialscale)
 **Content**
 
 Geographical coverage of the measure (e.g., local, national, EU-wide).
@@ -133,42 +169,70 @@ It can be tested against the SpatialScale of SourceApportionment which was used 
 
 ### MEA_10 – ImplementationBegin
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Measure.html#mea-10-implementationbegin)
 **Content**
 
 Start date for implementing the measure.
 
 ### MEA_11 – ImplementationEnd
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Measure.html#mea-11-implementationend)
 **Content**
 
 End date for implementing the measure.
 
 ### MEA_12 – MeasureCost
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Measure.html#mea-12-measurecost)
 **Content**
 
 Estimated costs for implementing the measure over its lifetime.
 
 ### MEA_13 – FullEffectDate
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Measure.html#mea-13-fulleffectdate)
 **Content**
 
 Date when the measure is expected to reach its full impact.
 
 ### MEA_14 – MeasureStatus
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Measure.html#mea-14-measurestatus)
 **Content**
 
 Current status of the measure (e.g., planned, in progress, completed).
 
 ### MEA_15 – ReasonIfMeasureNotUsed
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Measure.html#mea-15-reasonifmeasurenotused)
 **Content**
 
 Explanation or justification if the measure was not implemented.
 
 ### MEA_16 – Deletion
 
+
+**Reference**
+
+[View reference attribute](https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/tables/Measure.html#mea-16-deletion)
 **Content**
 
 Flag to indicate that this element must be deleted
