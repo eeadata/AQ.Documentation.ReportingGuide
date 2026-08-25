@@ -6,7 +6,7 @@ echo "Building local documentation..."
 
 rm -rf build/html
 
-python3 -m sphinx \
+/usr/bin/python3 -m sphinx \
     --keep-going \
     -E \
     -a \

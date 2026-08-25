@@ -17,3 +17,14 @@
 
   {% include "searchbox.html" %}
 {% endblock %}
+{% block menu %}
+  {{ super() }}
+
+  <div class="aura-pdf-link">
+    <a href="{{ pathto('_static/AQ_eReporting_Guide.pdf', 1) }}"
+       target="_blank"
+       rel="noopener">
+      PDF version
+    </a>
+  </div>
+{% endblock %}

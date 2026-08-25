@@ -5,10 +5,17 @@ set -Eeuo pipefail
 EXPECTED_BRANCH="main"
 EXPECTED_REMOTE="origin"
 EXPECTED_REPO="MIH-aqteam/AQ_Guide_Pilot"
+
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 DOCS_DIR="$SCRIPT_DIR/docs"
+PDF_SCRIPT="$SCRIPT_DIR/make_pdf.sh"
+PDF_FILE="$SCRIPT_DIR/AQ_eReporting_Guide.pdf"
+STATIC_PDF="$SCRIPT_DIR/source/_static/AQ_eReporting_Guide.pdf"
+DOCS_PDF="$DOCS_DIR/_static/AQ_eReporting_Guide.pdf"
+COMBINED_HTML="$DOCS_DIR/_pdf_reporting_guide.html"
 
 cd "$SCRIPT_DIR"
+
 clear 2>/dev/null || true
 
 fail() {
@@ -36,13 +43,16 @@ echo "This script will:"
 echo "  1. Verify the project, branch and remote"
 echo "  2. Show the current Git status"
 echo "  3. Build the Sphinx documentation with warnings as errors"
-echo "  4. Show and stage all resulting changes"
-echo "  5. Create one Git commit"
-echo "  6. Push main to the personal pilot repository"
+echo "  4. Generate the complete PDF version"
+echo "  5. Add the fresh PDF to the published website"
+echo "  6. Show and stage all resulting changes"
+echo "  7. Create one Git commit"
+echo "  8. Push main to the personal pilot repository"
 echo
 echo "No commit or push occurs without a separate confirmation."
 echo "Nothing has been changed yet."
 echo
+
 read -r -p "Press ENTER to begin verification, or Ctrl-C to abort."
 
 echo
@@ -57,7 +67,20 @@ git rev-parse --is-inside-work-tree >/dev/null 2>&1 || \
 [[ -f "$SCRIPT_DIR/source/conf.py" ]] || \
     fail "source/conf.py was not found. Run this script from the project copy."
 
+grep -Fq 'project = "AQ eReporting Guide"' "$SCRIPT_DIR/source/conf.py" || \
+    fail "source/conf.py does not identify the AQ eReporting Guide."
+
+[[ -f "$PDF_SCRIPT" ]] || \
+    fail "make_pdf.sh was not found next to publish.sh."
+
+[[ -x "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" ]] || \
+    fail "Google Chrome was not found at the expected location."
+
+/usr/bin/python3 -m sphinx --version >/dev/null 2>&1 || \
+    fail "Sphinx is not available through /usr/bin/python3."
+
 CURRENT_BRANCH="$(git branch --show-current)"
+
 echo "Project        : $SCRIPT_DIR"
 echo "Current branch : $CURRENT_BRANCH"
 
@@ -68,6 +91,7 @@ git remote get-url "$EXPECTED_REMOTE" >/dev/null 2>&1 || \
     fail "Git remote '$EXPECTED_REMOTE' does not exist."
 
 REMOTE_URL="$(git remote get-url "$EXPECTED_REMOTE")"
+
 echo "Remote         : $EXPECTED_REMOTE"
 echo "Remote URL     : $REMOTE_URL"
 
@@ -97,7 +121,8 @@ fi
 echo
 echo "Repository verification succeeded."
 echo
-read -r -p "Press ENTER to continue to the strict Sphinx build, or Ctrl-C to abort."
+
+read -r -p "Press ENTER to continue to the strict Sphinx build and PDF generation, or Ctrl-C to abort."
 
 echo
 echo "------------------------------------------------------------"
@@ -108,8 +133,8 @@ echo
 echo "Removing the previous docs/ publication build..."
 rm -rf -- "$DOCS_DIR"
 
-echo "Building documentation..."
-python3 -m sphinx \
+echo "Building documentation with the known Sphinx environment..."
+/usr/bin/python3 -m sphinx \
     -W \
     --keep-going \
     -E \
@@ -121,12 +146,49 @@ python3 -m sphinx \
 touch "$DOCS_DIR/.nojekyll"
 
 echo
-echo "Build completed successfully."
+echo "HTML build completed successfully."
 echo "No Sphinx warnings were detected."
 
 echo
 echo "------------------------------------------------------------"
-echo "3. REVIEWING AND STAGING CHANGES"
+echo "3. GENERATING PDF VERSION"
+echo "------------------------------------------------------------"
+echo
+
+echo "Generating AQ_eReporting_Guide.pdf with the validated Chromium method..."
+bash "$PDF_SCRIPT"
+
+[[ -s "$PDF_FILE" ]] || \
+    fail "The PDF was not generated or is empty."
+
+mkdir -p "$SCRIPT_DIR/source/_static" "$DOCS_DIR/_static"
+
+echo "Installing the fresh PDF in source/_static/..."
+cp -f "$PDF_FILE" "$STATIC_PDF"
+
+echo "Installing the fresh PDF in docs/_static/..."
+cp -f "$PDF_FILE" "$DOCS_PDF"
+
+# The combined HTML is only an intermediate file used by make_pdf.sh.
+rm -f -- "$COMBINED_HTML"
+
+# Avoid committing a duplicate copy at the project root.
+rm -f -- "$PDF_FILE"
+
+[[ -s "$STATIC_PDF" ]] || \
+    fail "The source/_static PDF copy is missing or empty."
+
+[[ -s "$DOCS_PDF" ]] || \
+    fail "The docs/_static PDF copy is missing or empty."
+
+echo
+echo "PDF generation completed successfully."
+echo "Published PDF:"
+echo "  docs/_static/AQ_eReporting_Guide.pdf"
+
+echo
+echo "------------------------------------------------------------"
+echo "4. REVIEWING AND STAGING CHANGES"
 echo "------------------------------------------------------------"
 echo
 
@@ -155,6 +217,7 @@ echo
 echo "Files staged for the commit:"
 echo
 git status --short
+
 echo
 git --no-pager diff --cached --stat
 
@@ -166,7 +229,7 @@ fi
 
 echo
 echo "------------------------------------------------------------"
-echo "4. CREATING THE COMMIT"
+echo "5. CREATING THE COMMIT"
 echo "------------------------------------------------------------"
 echo
 
@@ -200,9 +263,10 @@ fi
 
 echo
 echo "------------------------------------------------------------"
-echo "5. FINAL PILOT PUBLICATION CHECK"
+echo "6. FINAL PILOT PUBLICATION CHECK"
 echo "------------------------------------------------------------"
 echo
+
 echo "Repository : $EXPECTED_REPO"
 echo "Remote     : $EXPECTED_REMOTE"
 echo "Branch     : $EXPECTED_BRANCH"
@@ -229,9 +293,12 @@ echo
 echo "Repository: https://github.com/$EXPECTED_REPO"
 echo "Website   : https://mih-aqteam.github.io/AQ_Guide_Pilot/"
 echo
-echo "After GitHub Pages finishes deploying, validate the pilot site."
-echo "Only then run:"
+echo "The website now includes:"
+echo "  - the HTML AQ eReporting Guide"
+echo "  - the PDF version at _static/AQ_eReporting_Guide.pdf"
 echo
-echo "  ./publish_eea.sh"
+echo "GitHub Pages must be set to:"
+echo "  Branch: main"
+echo "  Folder: /docs"
 echo
 echo "============================================================"

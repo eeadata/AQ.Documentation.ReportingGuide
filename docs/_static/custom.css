@@ -602,3 +602,29 @@ footer {
 .aura-sites + * {
     margin-top: 12px;
 }
+/* =========================================================
+   PDF VERSION BUTTON
+   ========================================================= */
+
+.aura-pdf-link {
+    margin: 20px 12px 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.aura-pdf-link a {
+    display: block;
+    padding: 9px 10px;
+    border: 2px solid #c62828;
+    border-radius: 4px;
+    color: #c62828 !important;
+    background: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+.aura-pdf-link a:hover {
+    color: #ffffff !important;
+    background: #c62828;
+}
