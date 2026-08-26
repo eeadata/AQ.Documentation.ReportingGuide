@@ -1,16 +1,25 @@
 #!/bin/bash
-
 set -Eeuo pipefail
 
 EXPECTED_BRANCH="main"
+
 PILOT_REMOTE="origin"
 PILOT_REPO="MIH-aqteam/AQ_Guide_Pilot"
+
 EEA_REMOTE="eea"
 EEA_REPO="eeadata/AQ.Documentation.ReportingGuide"
+
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+DOCS_DIR="$SCRIPT_DIR/docs"
+
+STATIC_PDF="$SCRIPT_DIR/source/_static/AQ_eReporting_Guide.pdf"
+DOCS_PDF="$DOCS_DIR/_static/AQ_eReporting_Guide.pdf"
+
 CHECK_DIR="$SCRIPT_DIR/build/eea-check"
+CHECK_PDF="$CHECK_DIR/_static/AQ_eReporting_Guide.pdf"
 
 cd "$SCRIPT_DIR"
+
 clear 2>/dev/null || true
 
 fail() {
@@ -35,6 +44,7 @@ check_remote() {
         fail "Git remote '$remote_name' does not exist."
 
     remote_url="$(git remote get-url "$remote_name")"
+
     echo "Remote $remote_name : $remote_url"
 
     case "$remote_url" in
@@ -56,11 +66,14 @@ echo "This script publishes to EEA only the exact commit that:"
 echo "  1. is on local branch main"
 echo "  2. has already been pushed to the personal pilot"
 echo "  3. has been visually validated on the pilot website"
-echo "  4. passes a fresh strict Sphinx build"
+echo "  4. contains the validated PDF publication files"
+echo "  5. passes a fresh strict Sphinx build"
 echo
-echo "This script does not stage files or create another commit."
+echo "This script does not generate the PDF, stage files or create another commit."
+echo "It publishes exactly the commit already validated on the personal pilot."
 echo "Nothing has been changed yet."
 echo
+
 read -r -p "Press ENTER to begin verification, or Ctrl-C to abort."
 
 echo
@@ -75,7 +88,14 @@ git rev-parse --is-inside-work-tree >/dev/null 2>&1 || \
 [[ -f "$SCRIPT_DIR/source/conf.py" ]] || \
     fail "source/conf.py was not found. Run this script from the project copy."
 
+grep -Fq 'project = "AQ eReporting Guide"' "$SCRIPT_DIR/source/conf.py" || \
+    fail "source/conf.py does not identify the AQ eReporting Guide."
+
+/usr/bin/python3 -m sphinx --version >/dev/null 2>&1 || \
+    fail "Sphinx is not available through /usr/bin/python3."
+
 CURRENT_BRANCH="$(git branch --show-current)"
+
 echo "Project        : $SCRIPT_DIR"
 echo "Current branch : $CURRENT_BRANCH"
 
@@ -98,23 +118,53 @@ fi
 
 echo
 echo "Project, branch and remote verification succeeded."
+
+echo
+echo "------------------------------------------------------------"
+echo "2. VERIFYING PDF PUBLICATION FILES"
+echo "------------------------------------------------------------"
 echo
 
-if ! confirm "Have you visually validated the current PILOT website?"; then
+[[ -s "$STATIC_PDF" ]] || \
+    fail "source/_static/AQ_eReporting_Guide.pdf is missing or empty."
+
+[[ -s "$DOCS_PDF" ]] || \
+    fail "docs/_static/AQ_eReporting_Guide.pdf is missing or empty."
+
+cmp -s "$STATIC_PDF" "$DOCS_PDF" || \
+    fail "The PDF copies in source/_static and docs/_static are not identical."
+
+[[ -f "$DOCS_DIR/.nojekyll" ]] || \
+    fail "docs/.nojekyll is missing."
+
+git ls-files --error-unmatch "source/_static/AQ_eReporting_Guide.pdf" >/dev/null 2>&1 || \
+    fail "source/_static/AQ_eReporting_Guide.pdf is not tracked by Git."
+
+git ls-files --error-unmatch "docs/_static/AQ_eReporting_Guide.pdf" >/dev/null 2>&1 || \
+    fail "docs/_static/AQ_eReporting_Guide.pdf is not tracked by Git."
+
+echo "PDF source copy : source/_static/AQ_eReporting_Guide.pdf"
+echo "PDF website copy: docs/_static/AQ_eReporting_Guide.pdf"
+echo "The two PDF copies are present, tracked and identical."
+echo
+
+if ! confirm "Have you visually validated the current PILOT website, including the PDF link?"; then
     echo
-    echo "EEA publication cancelled. Validate the pilot website first."
+    echo "EEA publication cancelled. Validate the pilot website and PDF first."
     exit 0
 fi
 
 echo
 echo "------------------------------------------------------------"
-echo "2. VERIFYING REMOTE COMMITS"
+echo "3. VERIFYING REMOTE COMMITS"
 echo "------------------------------------------------------------"
 echo
+
 echo "Refreshing pilot and EEA branch information..."
 
 git fetch --quiet "$PILOT_REMOTE" \
     "+refs/heads/$EXPECTED_BRANCH:refs/remotes/$PILOT_REMOTE/$EXPECTED_BRANCH"
+
 git fetch --quiet "$EEA_REMOTE" \
     "+refs/heads/$EXPECTED_BRANCH:refs/remotes/$EEA_REMOTE/$EXPECTED_BRANCH"
 
@@ -145,18 +195,21 @@ git --no-pager log --oneline "$EEA_REMOTE/$EXPECTED_BRANCH..HEAD"
 
 echo
 echo "Remote commit verification succeeded."
+
 echo
 read -r -p "Press ENTER to run the final strict Sphinx check, or Ctrl-C to abort."
 
 echo
 echo "------------------------------------------------------------"
-echo "3. FINAL STRICT SPHINX CHECK"
+echo "4. FINAL STRICT SPHINX AND PDF CHECK"
 echo "------------------------------------------------------------"
 echo
 
 rm -rf -- "$CHECK_DIR"
 
-python3 -m sphinx \
+echo "Building documentation with the same Sphinx environment used by publish.sh..."
+
+/usr/bin/python3 -m sphinx \
     -W \
     --keep-going \
     -E \
@@ -165,8 +218,15 @@ python3 -m sphinx \
     source \
     "$CHECK_DIR"
 
+[[ -s "$CHECK_PDF" ]] || \
+    fail "The strict validation build does not contain _static/AQ_eReporting_Guide.pdf."
+
+cmp -s "$STATIC_PDF" "$CHECK_PDF" || \
+    fail "The PDF copied by the strict validation build differs from source/_static/AQ_eReporting_Guide.pdf."
+
 echo
 echo "Strict Sphinx build completed with no warnings."
+echo "The validation build contains the expected PDF."
 
 if [[ -n "$(git status --porcelain)" ]]; then
     echo
@@ -176,9 +236,10 @@ fi
 
 echo
 echo "------------------------------------------------------------"
-echo "4. FINAL EEA PUBLICATION CHECK"
+echo "5. FINAL EEA PUBLICATION CHECK"
 echo "------------------------------------------------------------"
 echo
+
 echo "Repository : $EEA_REPO"
 echo "Remote     : $EEA_REMOTE"
 echo "Branch     : $EXPECTED_BRANCH"
@@ -203,6 +264,10 @@ echo "============================================================"
 echo
 echo "Repository: https://github.com/$EEA_REPO"
 echo "Website   : https://eeadata.github.io/AQ.Documentation.ReportingGuide/"
+echo
+echo "The EEA website now includes:"
+echo "  - the HTML AQ eReporting Guide"
+echo "  - the PDF version at _static/AQ_eReporting_Guide.pdf"
 echo
 echo "GitHub Actions will now deploy the updated EEA website."
 echo "============================================================"
