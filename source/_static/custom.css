@@ -614,12 +614,13 @@ footer {
 
 .aura-pdf-link a {
     display: block;
-    padding: 9px 10px;
-    border: 2px solid #c62828;
-    border-radius: 4px;
-    color: #c62828 !important;
+    padding: 4px 6px;
+    border: 1px solid #a64b4b;
+    border-radius: 3px;
+    color: #222 !important;
     background: #ffffff;
-    font-weight: 700;
+    font-size: 0.80em;
+    font-weight: 400;
     text-align: center;
     text-decoration: none !important;
 }
