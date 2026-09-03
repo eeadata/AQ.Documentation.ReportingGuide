@@ -259,7 +259,7 @@ In case where the same, e.g. DataQualityDocumentId, was used for all records and
 </tr>
 <tr class="row-even"><td><p>SPP_03</p></td>
 <td><p>AssessmentMethodId</p></td>
-<td><p>varchar(50)</p></td>
+<td><p>varchar(100)</p></td>
 <td><p>string</p></td>
 <td><p>PK</p></td>
 <td><p></p></td>
@@ -355,6 +355,10 @@ In case where the same, e.g. DataQualityDocumentId, was used for all records and
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Attributes with ReportNet3 data type <code class="docutils literal notranslate"><span class="pre">date</span></code> or <code class="docutils literal notranslate"><span class="pre">datetime</span></code> shall use the ISO 8601 format. Date-time values may include a local UTC offset.</p>
+</div>
 </section>
 <section id="attribute-details">
 <h2><a class="toc-backref" href="#id5" role="doc-backlink">Attribute details</a><a class="headerlink" href="#attribute-details" title="Link to this heading"></a></h2>
@@ -497,14 +501,14 @@ The same sampling point can be re-opened, also with the same ProcessId, by addin
 <tr class="row-even"><td><p>SPP_03</p></td>
 <td><p>AssessmentMethodId</p></td>
 <td><p>SPO_DU0001_0005_100</p></td>
-<td><p>varchar(50)</p></td>
+<td><p>varchar(100)</p></td>
 <td><p>string</p></td>
 <td><p>✓</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p>SPP_04</p></td>
 <td><p>ProcessActivityBegin</p></td>
-<td><p>25/06/2013 00:00</p></td>
+<td><p>2013-06-25T00:00</p></td>
 <td><p>datetime</p></td>
 <td><p>datetime</p></td>
 <td><p>✓</p></td>

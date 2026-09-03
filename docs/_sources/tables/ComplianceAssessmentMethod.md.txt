@@ -59,9 +59,9 @@ Deletion of an existing record is possible via the Deletion attribute (by report
 |---|---|---|---|---|---|---|
 | CAM_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  |
 | CAM_02 | ReportingYear | int | numeric | PK |  |  |
-| CAM_03 | AssessmentRegimeId | varchar(50) | string | PK |  | [AssessmentRegimeZone](AssessmentRegimeZone.md) |
+| CAM_03 | AssessmentRegimeId | varchar(100) | string | PK |  | [AssessmentRegimeZone](AssessmentRegimeZone.md) |
 | CAM_04 | DataAggregationProcessId | varchar(50) | string | PK | [aggregationprocess](https://dd.eionet.europa.eu/vocabulary/aq/aggregationprocess/view) |  |
-| CAM_05 | AssessmentMethodId | varchar(50) | string | PK |  | [SamplingPoint](SamplingPoint.md)<br>[SamplingProcess](SamplingProcess.md)<br>[SamplingPointLocation](SamplingPointLocation.md)<br>[ObservationMeasurementResult](ObservationMeasurementResult.md)<br>[ModelObjectiveEstimation](ModelObjectiveEstimation.md)<br>[MOEResultInline](MOEResultInline.md)<br>[MOEResultExternal](MOEResultExternal.md) |
+| CAM_05 | AssessmentMethodId | varchar(100) | string | PK |  | [SamplingPoint](SamplingPoint.md)<br>[SamplingProcess](SamplingProcess.md)<br>[SamplingPointLocation](SamplingPointLocation.md)<br>[ObservationMeasurementResult](ObservationMeasurementResult.md)<br>[ModelObjectiveEstimation](ModelObjectiveEstimation.md)<br>[MOEResultInline](MOEResultInline.md)<br>[MOEResultExternal](MOEResultExternal.md) |
 | CAM_06 | PollutantId | int | numeric |  | [pollutant](https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view) |  |
 | CAM_07 | AssessmentType | varchar(50) | string |  | [assessmenttype](https://dd.eionet.europa.eu/vocabulary/aq/assessmenttype/view) |  |
 | CAM_08 | IsExceedance | varchar(5) | string |  |  |  |
@@ -306,7 +306,7 @@ CAM_01 | CountryCode | DU | varchar(2) | string | ✓ | ✓
 CAM_02 | ReportingYear | 2024 | int | numeric | ✓ | 
 CAM_03 | AssessmentRegimeId | ARE_ZON_DU000A_0005_LV_H_aMean_2021_1 | varchar(50) | string | ✓ | 
 CAM_04 | DataAggregationProcessId | P1Y | varchar(50) | string | ✓ | ✓
-CAM_05 | AssessmentMethodId | SPO_DU0001_0005_100 | varchar(50) | string | ✓ | 
+CAM_05 | AssessmentMethodId | SPO_DU0001_0005_100 | varchar(100) | string | ✓ | 
 CAM_06 | PollutantId | 5 | int | numeric |  | ✓
 CAM_07 | AssessmentType | fixed | varchar(50) | string |  | ✓
 CAM_08 | IsExceedance | FALSE | varchar(5) | string |  | 

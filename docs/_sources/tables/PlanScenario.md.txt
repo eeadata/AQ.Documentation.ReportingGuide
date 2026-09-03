@@ -65,7 +65,7 @@ Keep in mind that authorities responsible for establishing plans and for reporti
 | PSC_08 | ScenarioYear | int | numeric |  |  |  |
 | PSC_09 | ScenarioPollutionLevel | decimal(10,2) | numeric |  |  |  |
 | PSC_10 | ExposedPopulation | int | numeric |  |  |  |
-| PSC_11 | ScenarioAssessmentMethodId | varchar(50) | string |  |  | [ModelObjectiveEstimation](ModelObjectiveEstimation.md) |
+| PSC_11 | ScenarioAssessmentMethodId | varchar(100) | string |  |  | [ModelObjectiveEstimation](ModelObjectiveEstimation.md) |
 
 ## Attribute details
 
@@ -207,7 +207,7 @@ PSC_07 | DataAggregationProcessId | P1Y-daysAbove50 | varchar(50) | string |  | 
 PSC_08 | ScenarioYear | 2024 | int | numeric |  | 
 PSC_09 | ScenarioPollutionLevel | 43 | decimal(10,2) | numeric |  | 
 PSC_10 | ExposedPopulation | 95250 | int | numeric |  | 
-PSC_11 | ScenarioAssessmentMethodId | MOD_DU_PM10_LOC_SCEN_REF | varchar(50) | string |  | 
+PSC_11 | ScenarioAssessmentMethodId | MOD_DU_PM10_LOC_SCEN_REF | varchar(100) | string |  | 
 
 **Legend:** PK = Primary Key; CL = Code List.
 

@@ -53,7 +53,7 @@ In case where the same, e.g. DataQualityDocumentId, was used for all records and
 |---|---|---|---|---|---|---|
 | SPP_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  |
 | SPP_02 | ProcessId | varchar(150) | string | PK |  |  |
-| SPP_03 | AssessmentMethodId | varchar(50) | string | PK |  | [ComplianceAssessmentMethod](ComplianceAssessmentMethod.md)<br>[SamplingPoint](SamplingPoint.md)<br>[SamplingPointLocation](SamplingPointLocation.md)<br>[ObservationMeasurementResult](ObservationMeasurementResult.md) |
+| SPP_03 | AssessmentMethodId | varchar(100) | string | PK |  | [ComplianceAssessmentMethod](ComplianceAssessmentMethod.md)<br>[SamplingPoint](SamplingPoint.md)<br>[SamplingPointLocation](SamplingPointLocation.md)<br>[ObservationMeasurementResult](ObservationMeasurementResult.md) |
 | SPP_04 | ProcessActivityBegin | datetime | datetime | PK |  |  |
 | SPP_05 | ProcessActivityEnd | datetime | datetime |  |  |  |
 | SPP_06 | PollutantId | int | numeric |  | [pollutant](https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view) |  |
@@ -65,6 +65,10 @@ In case where the same, e.g. DataQualityDocumentId, was used for all records and
 | SPP_12 | DataQualityDocumentId | varchar(150) | string |  |  | [Documentation](Documentation.md) |
 | SPP_13 | EquivalenceDemonstrationDocumentId | varchar(150) | string |  |  | [Documentation](Documentation.md) |
 | SPP_14 | ProcessDocumentId | varchar(150) | string |  |  | [Documentation](Documentation.md) |
+
+```{note}
+Attributes with ReportNet3 data type `date` or `datetime` shall use the ISO 8601 format. Date-time values may include a local UTC offset.
+```
 
 ## Attribute details
 
@@ -227,8 +231,8 @@ Identifier of the documentation on process and data quality given by data provid
 | --- | --- | --- | --- | --- | --- | --- |
 SPP_01 | CountryCode | DU | varchar(2) | string | ✓ | ✓
 SPP_02 | ProcessId | SPP_DU0001_0005_1 | varchar(150) | string | ✓ | 
-SPP_03 | AssessmentMethodId | SPO_DU0001_0005_100 | varchar(50) | string | ✓ | 
-SPP_04 | ProcessActivityBegin | 25/06/2013 00:00 | datetime | datetime | ✓ | 
+SPP_03 | AssessmentMethodId | SPO_DU0001_0005_100 | varchar(100) | string | ✓ | 
+SPP_04 | ProcessActivityBegin | 2013-06-25T00:00 | datetime | datetime | ✓ |
 SPP_05 | ProcessActivityEnd | null | datetime | datetime |  | 
 SPP_06 | PollutantId | 5 | int | numeric |  | ✓
 SPP_07 | MeasurementType | automatic | varchar(50) | string |  | ✓

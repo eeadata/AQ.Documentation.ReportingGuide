@@ -48,7 +48,7 @@ In case where the LocationBegin was reported wrongly and/or the corresponding re
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) |
 |---|---|---|---|---|---|---|
 | SPL_01 | CountryCode | varchar(2) | string | PK |  |  |
-| SPL_02 | AssessmentMethodId | varchar(50) | string | PK |  | [ComplianceAssessmentMethod](ComplianceAssessmentMethod.md)<br>[SamplingPoint](SamplingPoint.md)<br>[SamplingProcess](SamplingProcess.md)<br>[ObservationMeasurementResult](ObservationMeasurementResult.md) |
+| SPL_02 | AssessmentMethodId | varchar(100) | string | PK |  | [ComplianceAssessmentMethod](ComplianceAssessmentMethod.md)<br>[SamplingPoint](SamplingPoint.md)<br>[SamplingProcess](SamplingProcess.md)<br>[ObservationMeasurementResult](ObservationMeasurementResult.md) |
 | SPL_03 | LocationBegin | datetime | datetime | PK |  |  |
 | SPL_04 | LocationEnd | datetime | datetime |  |  |  |
 | SPL_05 | StationArea | varchar(100) | string |  | [areaclassification](https://dd.eionet.europa.eu/vocabulary/aq/areaclassification/view) |  |
@@ -63,6 +63,10 @@ In case where the LocationBegin was reported wrongly and/or the corresponding re
 | SPL_14 | KerbDistance | decimal(10,1) | numeric |  |  |  |
 | SPL_15 | EmissionSourceDistance | decimal(10,1) | numeric |  |  |  |
 
+
+```{note}
+Attributes with ReportNet3 data type `date` or `datetime` shall use the ISO 8601 format. Date-time values may include a local UTC offset.
+```
 
 ## Attribute details
 
@@ -247,8 +251,8 @@ Horizontal distance from the main emission source, in meters.
 | Attribute Code | Attribute Name | Example | SQL DB Data Type | ReportNet3 Data Type | PK | CL |
 | --- | --- | --- | --- | --- | --- | --- |
 SPL_01 | CountryCode | DU | varchar(2) | string | ✓ | 
-SPL_02 | AssessmentMethodId | SPO_DU0001_0005_100 | varchar(50) | string | ✓ | 
-SPL_03 | LocationBegin | 25/06/2013 00:00 | datetime | datetime | ✓ | 
+SPL_02 | AssessmentMethodId | SPO_DU0001_0005_100 | varchar(100) | string | ✓ | 
+SPL_03 | LocationBegin | 2013-06-25T00:00 | datetime | datetime | ✓ |
 SPL_04 | LocationEnd | null | datetime | datetime |  | 
 SPL_05 | StationArea | urban | varchar(100) | string |  | ✓
 SPL_06 | SamplingPointCategory | background | varchar(50) | string |  | ✓

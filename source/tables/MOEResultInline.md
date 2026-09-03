@@ -59,7 +59,7 @@ Results from modelling reported inline should point to record in ModelObjectiveE
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) |
 |---|---|---|---|---|---|---|
 | MRI_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  |
-| MRI_02 | AssessmentMethodId | varchar(50) | string | PK |  | [ComplianceAssessmentMethod](ComplianceAssessmentMethod.md)<br>[ModelObjectiveEstimation](ModelObjectiveEstimation.md) |
+| MRI_02 | AssessmentMethodId | varchar(100) | string | PK |  | [ComplianceAssessmentMethod](ComplianceAssessmentMethod.md)<br>[ModelObjectiveEstimation](ModelObjectiveEstimation.md) |
 | MRI_03 | Start | datetime | datetime | PK |  |  |
 | MRI_04 | DataAggregationProcessId | varchar(50) | string | PK | [aggregationprocess](https://dd.eionet.europa.eu/vocabulary/aq/aggregationprocess/view) | [ModelObjectiveEstimation](ModelObjectiveEstimation.md) |
 | MRI_05 | X | bigint | numeric | PK |  |  |
@@ -71,6 +71,10 @@ Results from modelling reported inline should point to record in ModelObjectiveE
 | MRI_11 | Validity | int | numeric |  | [observationvalidity](https://dd.eionet.europa.eu/vocabulary/aq/observationvalidity/view) |  |
 | MRI_12 | SpatialResolution | int | numeric |  | [spatialresolution](https://dd.eionet.europa.eu/vocabulary/aq/spatialresolution) |  |
 | MRI_13 | ResultTime | datetime | datetime |  |  |  |
+
+```{note}
+Attributes with ReportNet3 data type `date` or `datetime` shall use the ISO 8601 format. Date-time values may include a local UTC offset.
+```
 
 ## Attribute details
 
@@ -187,18 +191,18 @@ Time at which the model results were generated or recorded.
 | Attribute Code | Attribute Name | Example | SQL DB Data Type | ReportNet3 Data Type | PK | CL |
 | --- | --- | --- | --- | --- | --- | --- |
 MRI_01 | CountryCode | DU | varchar(2) | string | ✓ | ✓
-MRI_02 | AssessmentMethodId | OBE_DU_SEASALT_PM10_H_LV_ADJ | varchar(50) | string | ✓ | 
-MRI_03 | Start | 2024-01-01 00:00:00 | datetime | datetime | ✓ | 
+MRI_02 | AssessmentMethodId | OBE_DU_SEASALT_PM10_H_LV_ADJ | varchar(100) | string | ✓ | 
+MRI_03 | Start | 2024-01-01T00:00:00 | datetime | datetime | ✓ |
 MRI_04 | DataAggregationProcessId | P1D | varchar(50) | string | ✓ | ✓
 MRI_05 | X | 3463000 | bigint | numeric | ✓ | 
 MRI_06 | Y | 2245000 | bigint | numeric | ✓ | 
 MRI_07 | PollutantId | 5 | int | numeric |  | ✓
-MRI_08 | End | 2024-01-02 00:00:00 | datetime | datetime |  | 
+MRI_08 | End | 2024-01-02T00:00:00 | datetime | datetime |  |
 MRI_09 | Value | 1 | decimal(10,2) | numeric |  | 
 MRI_10 | Unit | ug/m3 | varchar(10) | string |  | ✓
 MRI_11 | Validity | 1 | int | numeric |  | ✓
 MRI_12 | SpatialResolution | 1000 | int | numeric |  | ✓
-MRI_13 | ResultTime | 2025-09-14 10:19:44 | datetime | datetime |  | 
+MRI_13 | ResultTime | 2025-09-14T10:19:44 | datetime | datetime |  |
 
 **Legend:** PK = Primary Key; FK = Foreign Key; CL = Code List.
 

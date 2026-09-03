@@ -61,7 +61,7 @@ ResultEncoding = 'external'
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) |
 |---|---|---|---|---|---|---|
 | MRE_01 | CountryCode | varchar(2) | string | PK | [https://dd.eionet.europa.eu/vocabulary/common/countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  |
-| MRE_02 | AssessmentMethodId | varchar(50) | string | PK |  | [ComplianceAssessmentMethod](ComplianceAssessmentMethod.md)<br>[ModelObjectiveEstimation](ModelObjectiveEstimation.md) |
+| MRE_02 | AssessmentMethodId | varchar(100) | string | PK |  | [ComplianceAssessmentMethod](ComplianceAssessmentMethod.md)<br>[ModelObjectiveEstimation](ModelObjectiveEstimation.md) |
 | MRE_03 | Start | datetime | datetime | PK |  |  |
 | MRE_04 | DataAggregationProcessId | varchar(50) | string | PK | [https://dd.eionet.europa.eu/vocabulary/aq/aggregationprocess/view](https://dd.eionet.europa.eu/vocabulary/aq/aggregationprocess/view) | [ModelObjectiveEstimation](ModelObjectiveEstimation.md) |
 | MRE_05 | PollutantId | int | numeric |  | [https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view](https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view) |  |
@@ -71,6 +71,10 @@ ResultEncoding = 'external'
 | MRE_09 | SpatialResolution | int | numeric |  | [https://dd.eionet.europa.eu/vocabulary/aq/spatialresolution](https://dd.eionet.europa.eu/vocabulary/aq/spatialresolution) |  |
 | MRE_10 | ResultTime | datetime | datetime |  |  |  |
 | MRE_11 | GeoTiffAttachment | varchar(100) | attachment (R3 data type) |  |  |  |
+
+```{note}
+Attributes with ReportNet3 data type `date` or `datetime` shall use the ISO 8601 format. Date-time values may include a local UTC offset.
+```
 
 ## Attribute details
 
@@ -167,15 +171,15 @@ Attached GEOTIFF.
 | Attribute Code | Attribute Name | Example | SQL DB Data Type | ReportNet3 Data Type | PK | CL |
 | --- | --- | --- | --- | --- | --- | --- |
 MRE_01 | CountryCode | DU | varchar(2) | string | ✓ | ✓
-MRE_02 | AssessmentMethodId | MOD_DU_PM10_NAT_SR | varchar(50) | string | ✓ | 
-MRE_03 | Start | 2021-01-01 00:00:00 | datetime | datetime | ✓ | 
+MRE_02 | AssessmentMethodId | MOD_DU_PM10_NAT_SR | varchar(100) | string | ✓ | 
+MRE_03 | Start | 2021-01-01T00:00:00 | datetime | datetime | ✓ |
 MRE_04 | DataAggregationProcessId | P1Y | varchar(50) | string | ✓ | ✓
 MRE_05 | PollutantId | 5 | int | numeric |  | ✓
-MRE_06 | End | 2022-01-01 00:00:00 | datetime | datetime |  | 
+MRE_06 | End | 2022-01-01T00:00:00 | datetime | datetime |  |
 MRE_07 | Unit | ug/m3 | varchar(10) | string |  | ✓
 MRE_08 | Validity | 1 | int | numeric |  | ✓
 MRE_09 | SpatialResolution | 1000 | int | numeric |  | ✓
-MRE_10 | ResultTime | 2023-04-14 10:19:44 | datetime | datetime |  | 
+MRE_10 | ResultTime | 2023-04-14T10:19:44 | datetime | datetime |  |
 MRE_11 | GeoTiffAttachment |  | varchar(100) | attachment (R3 data type) |  | 
 
 **Legend:** PK = Primary Key; FK = Foreign Key; CL = Code List.

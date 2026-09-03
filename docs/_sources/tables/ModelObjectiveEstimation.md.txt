@@ -59,7 +59,7 @@ Records in ModelObjectiveEstimation table that do not have references in other t
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) |
 |---|---|---|---|---|---|---|
 | MOE_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  |
-| MOE_02 | AssessmentMethodId | varchar(50) | string | PK |  | [ComplianceAssessmentMethod](ComplianceAssessmentMethod.md)<br>[SpatialRepresentativeness](SpatialRepresentativeness.md)<br>[PollutionLevelAdjustment](PollutionLevelAdjustment.md)<br>[PlanScenario](PlanScenario.md)<br>[MOEResultInline](MOEResultInline.md)<br>[MOEResultExternal](MOEResultExternal.md) |
+| MOE_02 | AssessmentMethodId | varchar(100) | string | PK |  | [ComplianceAssessmentMethod](ComplianceAssessmentMethod.md)<br>[SpatialRepresentativeness](SpatialRepresentativeness.md)<br>[PollutionLevelAdjustment](PollutionLevelAdjustment.md)<br>[PlanScenario](PlanScenario.md)<br>[MOEResultInline](MOEResultInline.md)<br>[MOEResultExternal](MOEResultExternal.md) |
 | MOE_03 | DataAggregationProcessId | varchar(50) | string | PK | [aggregationprocess](https://dd.eionet.europa.eu/vocabulary/aq/aggregationprocess/view) | [MOEResultInline](MOEResultInline.md)<br>[MOEResultExternal](MOEResultExternal.md) |
 | MOE_04 | AssessmentMethodName | varchar(150) | string |  |  |  |
 | MOE_05 | PollutantId | int | numeric |  | [pollutant](https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view) |  |
@@ -233,7 +233,7 @@ Identifier of the report detailing the quality of the modelled data, given by th
 | Attribute Code | Attribute Name | Example | SQL DB Data Type | ReportNet3 Data Type | PK | CL |
 | --- | --- | --- | --- | --- | --- | --- |
 MOE_01 | CountryCode | DU | varchar(2) | string | ✓ | ✓
-MOE_02 | AssessmentMethodId | MOD_DU_NO2 | varchar(50) | string | ✓ | 
+MOE_02 | AssessmentMethodId | MOD_DU_NO2 | varchar(100) | string | ✓ | 
 MOE_03 | DataAggregationProcessId | P1Y | varchar(50) | string | ✓ | ✓
 MOE_04 | AssessmentMethodName | null | varchar(150) | string |  | 
 MOE_05 | PollutantId | 8 | int | numeric |  | ✓

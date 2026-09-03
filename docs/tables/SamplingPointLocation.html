@@ -247,7 +247,7 @@ Allowed modifications are not supposed to affect outcomes of compliance analysis
 </tr>
 <tr class="row-odd"><td><p>SPL_02</p></td>
 <td><p>AssessmentMethodId</p></td>
-<td><p>varchar(50)</p></td>
+<td><p>varchar(100)</p></td>
 <td><p>string</p></td>
 <td><p>PK</p></td>
 <td><p></p></td>
@@ -359,6 +359,10 @@ Allowed modifications are not supposed to affect outcomes of compliance analysis
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Attributes with ReportNet3 data type <code class="docutils literal notranslate"><span class="pre">date</span></code> or <code class="docutils literal notranslate"><span class="pre">datetime</span></code> shall use the ISO 8601 format. Date-time values may include a local UTC offset.</p>
+</div>
 </section>
 <section id="attribute-details">
 <h2><a class="toc-backref" href="#id5" role="doc-backlink">Attribute details</a><a class="headerlink" href="#attribute-details" title="Link to this heading"></a></h2>
@@ -506,14 +510,14 @@ Allowed modifications are not supposed to affect outcomes of compliance analysis
 <tr class="row-odd"><td><p>SPL_02</p></td>
 <td><p>AssessmentMethodId</p></td>
 <td><p>SPO_DU0001_0005_100</p></td>
-<td><p>varchar(50)</p></td>
+<td><p>varchar(100)</p></td>
 <td><p>string</p></td>
 <td><p>✓</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p>SPL_03</p></td>
 <td><p>LocationBegin</p></td>
-<td><p>25/06/2013 00:00</p></td>
+<td><p>2013-06-25T00:00</p></td>
 <td><p>datetime</p></td>
 <td><p>datetime</p></td>
 <td><p>✓</p></td>

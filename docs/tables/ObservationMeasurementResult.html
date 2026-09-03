@@ -257,7 +257,7 @@ SamplingPointReferenceId will be used in the reference/legacy data flow together
 </tr>
 <tr class="row-odd"><td><p>OMR_02</p></td>
 <td><p>AssessmentMethodId</p></td>
-<td><p>varchar(50)</p></td>
+<td><p>varchar(100)</p></td>
 <td><p>string</p></td>
 <td><p>PK</p></td>
 <td><p></p></td>
@@ -345,6 +345,10 @@ SamplingPointReferenceId will be used in the reference/legacy data flow together
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Attributes with ReportNet3 data type <code class="docutils literal notranslate"><span class="pre">date</span></code> or <code class="docutils literal notranslate"><span class="pre">datetime</span></code> shall use the ISO 8601 format. Date-time values may include a local UTC offset.</p>
+</div>
 </section>
 <section id="attribute-details">
 <h2><a class="toc-backref" href="#id5" role="doc-backlink">Attribute details</a><a class="headerlink" href="#attribute-details" title="Link to this heading"></a></h2>
@@ -424,17 +428,17 @@ This information will be used for recalculation of all datetimes into UTC+1 for 
 <section id="example">
 <h2><a class="toc-backref" href="#id18" role="doc-backlink">Example</a><a class="headerlink" href="#example" title="Link to this heading"></a></h2>
 <p>OMR_01 | CountryCode | DU | varchar(2) | string | ✓ | ✓
-OMR_02 | AssessmentMethodId | SPO_DU0001_0005_100 | varchar(50) | string | ✓ |
-OMR_03 | Start | 2024-01-01 00:00:00 | datetime | datetime | ✓ |
+OMR_02 | AssessmentMethodId | SPO_DU0001_0005_100 | varchar(100) | string | ✓ |
+OMR_03 | Start | 2024-01-01T00:00:00 | datetime | datetime | ✓ |
 OMR_04 | PollutantId | 5 | int | numeric |  | ✓
-OMR_05 | End | 2024-01-01 01:00:00 | datetime | datetime |  |
+OMR_05 | End | 2024-01-01T01:00:00 | datetime | datetime |  |
 OMR_06 | Value | 16.4 | decimal(10,2) | numeric |  |
 OMR_07 | Unit | ug/m3 | varchar(10) | string |  | ✓
 OMR_08 | Validity | 1 | int | numeric |  | ✓
 OMR_09 | Verification | 1 | int | numeric |  | ✓
 OMR_10 | DataCapture |  | decimal(5,2) | numeric |  |
 OMR_11 | TimeResolution | hour | varchar(10) | string |  | ✓
-OMR_12 | ResultTime | 2025-09-28 16:12:36 | datetime | datetime |  |</p>
+OMR_12 | ResultTime | 2025-09-28T16:12:36 | datetime | datetime |  |</p>
 <p><strong>Legend:</strong> PK = Primary Key; CL = Code List.</p>
 <p>The complete set of examples is available in the Excel workbook, worksheet <code class="docutils literal notranslate"><span class="pre">ObservationMeasurementResult</span></code>.</p>
 <p><a class="reference download internal" download="" href="../_downloads/c7d3627823fa17f2166571783d9562c2/R3_v501_AQ_Reporting_guide_example.xlsx"><span class="xref download myst">Download complete examples workbook</span></a></p>

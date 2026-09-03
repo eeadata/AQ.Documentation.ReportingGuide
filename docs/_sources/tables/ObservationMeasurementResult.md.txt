@@ -59,7 +59,7 @@ Deletion of records from ObservationMeasurementResult can be achieved by re-subm
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) |
 |---|---|---|---|---|---|---|
 | OMR_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  |
-| OMR_02 | AssessmentMethodId | varchar(50) | string | PK |  | [ComplianceAssessmentMethod](ComplianceAssessmentMethod.md)<br>[SamplingPoint](SamplingPoint.md)<br>[SamplingPointLocation](SamplingPointLocation.md)<br>[SamplingProcess](SamplingProcess.md) |
+| OMR_02 | AssessmentMethodId | varchar(100) | string | PK |  | [ComplianceAssessmentMethod](ComplianceAssessmentMethod.md)<br>[SamplingPoint](SamplingPoint.md)<br>[SamplingPointLocation](SamplingPointLocation.md)<br>[SamplingProcess](SamplingProcess.md) |
 | OMR_03 | Start | datetime | datetime | PK |  |  |
 | OMR_04 | PollutantId | int | numeric |  | [pollutant](https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view) |  |
 | OMR_05 | End | datetime | datetime |  |  |  |
@@ -70,6 +70,10 @@ Deletion of records from ObservationMeasurementResult can be achieved by re-subm
 | OMR_10 | DataCapture | decimal(5,2) | numeric |  |  |  |
 | OMR_11 | TimeResolution | varchar(10) | string |  | [primaryObservation](https://dd.eionet.europa.eu/vocabulary/aq/primaryObservation/view) |  |
 | OMR_12 | ResultTime | datetime | datetime |  |  |  |
+
+```{note}
+Attributes with ReportNet3 data type `date` or `datetime` shall use the ISO 8601 format. Date-time values may include a local UTC offset.
+```
 
 ## Attribute details
 
@@ -170,17 +174,17 @@ Time at which the result was generated or recorded.
 ## Example
 
 OMR_01 | CountryCode | DU | varchar(2) | string | ✓ | ✓
-OMR_02 | AssessmentMethodId | SPO_DU0001_0005_100 | varchar(50) | string | ✓ | 
-OMR_03 | Start | 2024-01-01 00:00:00 | datetime | datetime | ✓ | 
+OMR_02 | AssessmentMethodId | SPO_DU0001_0005_100 | varchar(100) | string | ✓ | 
+OMR_03 | Start | 2024-01-01T00:00:00 | datetime | datetime | ✓ |
 OMR_04 | PollutantId | 5 | int | numeric |  | ✓
-OMR_05 | End | 2024-01-01 01:00:00 | datetime | datetime |  | 
+OMR_05 | End | 2024-01-01T01:00:00 | datetime | datetime |  |
 OMR_06 | Value | 16.4 | decimal(10,2) | numeric |  | 
 OMR_07 | Unit | ug/m3 | varchar(10) | string |  | ✓
 OMR_08 | Validity | 1 | int | numeric |  | ✓
 OMR_09 | Verification | 1 | int | numeric |  | ✓
 OMR_10 | DataCapture |  | decimal(5,2) | numeric |  | 
 OMR_11 | TimeResolution | hour | varchar(10) | string |  | ✓
-OMR_12 | ResultTime | 2025-09-28 16:12:36 | datetime | datetime |  | 
+OMR_12 | ResultTime | 2025-09-28T16:12:36 | datetime | datetime |  |
 
 **Legend:** PK = Primary Key; CL = Code List.
 

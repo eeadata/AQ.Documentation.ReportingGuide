@@ -60,7 +60,7 @@ Records in ScenarioMeasure table which do not have any correspondence to records
 | SME_03 | ScenarioCategory | varchar(20) | string | PK | [scenariocategory](https://dd.eionet.europa.eu/vocabulary/aq/scenariocategory) |  |
 | SME_04 | MeasureGroupId | varchar(50) | string | PK |  | [MeasurementStation](MeasurementStation.md) |
 | SME_05 | MeasureGroupPollutionReduction | decimal(10,2) | numeric |  |  |  |
-| SME_06 | MeasureReductionAssessmentMethodId | varchar(50) | string |  |  | [ModelObjectiveEstimation](ModelObjectiveEstimation.md) |
+| SME_06 | MeasureReductionAssessmentMethodId | varchar(100) | string |  |  | [ModelObjectiveEstimation](ModelObjectiveEstimation.md) |
 
 ## Attribute details
 
@@ -155,7 +155,7 @@ SME_02 | ScenarioId | SCE_ZON_DU000B_00005_LV_H_daysAbove | varchar(50) | string
 SME_03 | ScenarioCategory | baseline | varchar(20) | string | ✓ | ✓
 SME_04 | MeasureGroupId | MG1_SCE_ZON_DU000B_00005_LV_H_daysAbove | varchar(50) | string | ✓ | 
 SME_05 | MeasureGroupPollutionReduction | null | decimal(10,2) | numeric |  | 
-SME_06 | MeasureReductionAssessmentMethodId | null | varchar(50) | string |  | 
+SME_06 | MeasureReductionAssessmentMethodId | null | varchar(100) | string |  | 
 
 **Legend:** PK = Primary Key; CL = Code List.
 

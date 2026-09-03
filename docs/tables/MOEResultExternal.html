@@ -258,7 +258,7 @@ MOEResultInventory will collect information about count of values reported for e
 </tr>
 <tr class="row-odd"><td><p>MRE_02</p></td>
 <td><p>AssessmentMethodId</p></td>
-<td><p>varchar(50)</p></td>
+<td><p>varchar(100)</p></td>
 <td><p>string</p></td>
 <td><p>PK</p></td>
 <td><p></p></td>
@@ -338,6 +338,10 @@ MOEResultInventory will collect information about count of values reported for e
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Attributes with ReportNet3 data type <code class="docutils literal notranslate"><span class="pre">date</span></code> or <code class="docutils literal notranslate"><span class="pre">datetime</span></code> shall use the ISO 8601 format. Date-time values may include a local UTC offset.</p>
+</div>
 </section>
 <section id="attribute-details">
 <h2><a class="toc-backref" href="#id5" role="doc-backlink">Attribute details</a><a class="headerlink" href="#attribute-details" title="Link to this heading"></a></h2>
@@ -434,14 +438,14 @@ This information will be used for recalculation of all datetimes into UTC+1 for 
 <tr class="row-odd"><td><p>MRE_02</p></td>
 <td><p>AssessmentMethodId</p></td>
 <td><p>MOD_DU_PM10_NAT_SR</p></td>
-<td><p>varchar(50)</p></td>
+<td><p>varchar(100)</p></td>
 <td><p>string</p></td>
 <td><p>✓</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p>MRE_03</p></td>
 <td><p>Start</p></td>
-<td><p>2021-01-01 00:00:00</p></td>
+<td><p>2021-01-01T00:00:00</p></td>
 <td><p>datetime</p></td>
 <td><p>datetime</p></td>
 <td><p>✓</p></td>
@@ -465,7 +469,7 @@ This information will be used for recalculation of all datetimes into UTC+1 for 
 </tr>
 <tr class="row-odd"><td><p>MRE_06</p></td>
 <td><p>End</p></td>
-<td><p>2022-01-01 00:00:00</p></td>
+<td><p>2022-01-01T00:00:00</p></td>
 <td><p>datetime</p></td>
 <td><p>datetime</p></td>
 <td><p></p></td>
@@ -497,7 +501,7 @@ This information will be used for recalculation of all datetimes into UTC+1 for 
 </tr>
 <tr class="row-odd"><td><p>MRE_10</p></td>
 <td><p>ResultTime</p></td>
-<td><p>2023-04-14 10:19:44</p></td>
+<td><p>2023-04-14T10:19:44</p></td>
 <td><p>datetime</p></td>
 <td><p>datetime</p></td>
 <td><p></p></td>

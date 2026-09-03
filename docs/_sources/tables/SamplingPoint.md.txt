@@ -59,7 +59,7 @@ SamplingPoint without both active SamplingProcess active SamplingPointLocation a
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) |
 |---|---|---|---|---|---|---|
 | SPO_01 | CountryCode | varchar(2) | string | PK | [](https://dd.eionet.europa.eu/vocabulary/common/countries) |  |
-| SPO_02 | AssessmentMethodId | varchar(50) | string | PK |  | [ComplianceAssessmentMethod](ComplianceAssessmentMethod.md)<br>[SamplingProcess](SamplingProcess.md)<br>[SamplingPointLocation](SamplingPointLocation.md)<br>[ObservationMeasurementResult](ObservationMeasurementResult.md) |
+| SPO_02 | AssessmentMethodId | varchar(100) | string | PK |  | [ComplianceAssessmentMethod](ComplianceAssessmentMethod.md)<br>[SamplingProcess](SamplingProcess.md)<br>[SamplingPointLocation](SamplingPointLocation.md)<br>[ObservationMeasurementResult](ObservationMeasurementResult.md) |
 | SPO_03 | SamplingPointReferenceId | varchar(32) | string |  |  |  |
 | SPO_04 | PollutantId | int | numeric |  | [pollutant](https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view) |  |
 | SPO_05 | StationEoICode | varchar(10) | string |  |  | [MeasurementStation](MeasurementStation.md) |
@@ -150,7 +150,7 @@ It will be cross-checked against Station table.
 | Attribute Code | Attribute Name | Example | SQL DB Data Type | ReportNet3 Data Type | PK | CL |
 | --- | --- | --- | --- | --- | --- | --- |
 SPO_01 | CountryCode | DU | varchar(2) | string | ✓ | ✓
-SPO_02 | AssessmentMethodId | SPO_DU0001_0005_100 | varchar(50) | string | ✓ | 
+SPO_02 | AssessmentMethodId | SPO_DU0001_0005_100 | varchar(100) | string | ✓ | 
 SPO_03 | SamplingPointReferenceId | SPOref_DU0001_0005_1 | varchar(32) | string |  | 
 SPO_04 | PollutantId | 5 | int | numeric |  | ✓
 SPO_05 | StationEoICode | DU0001 | varchar(10) | string |  | 

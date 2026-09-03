@@ -59,7 +59,7 @@ Deletion of records from ObservationMeasurementResult can be achieved by re-subm
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) |
 |---|---|---|---|---|---|---|
 | OMP_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  |
-| OMP_02 | AssessmentMethodId | varchar(50) | string | PK |  |  |
+| OMP_02 | AssessmentMethodId | varchar(100) | string | PK |  |  |
 | OMP_03 | Start | datetime | datetime | PK |  |  |
 | OMP_04 | LowerRange | int | numeric | PK |  |  |
 | OMP_05 | PollutantId | int | numeric |  | [pollutant](https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view) |  |
@@ -75,6 +75,10 @@ Deletion of records from ObservationMeasurementResult can be achieved by re-subm
 | OMP_15 | RelativeHumidity | decimal(5,2) | numeric |  |  |  |
 | OMP_16 | Pressure | decimal(5,2) | numeric |  |  |  |
 | OMP_17 | Inversion | varchar(20) | string |  | [PNSDinversion](https://dd.eionet.europa.eu/vocabulary/aq/PNSDinversion) |  |
+
+```{note}
+Attributes with ReportNet3 data type `date` or `datetime` shall use the ISO 8601 format. Date-time values may include a local UTC offset.
+```
 
 ## Attribute details
 

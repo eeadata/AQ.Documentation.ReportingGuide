@@ -48,9 +48,9 @@ Records in PollutionLevelAdjustment table which do not have any correspondence t
 | Attribute Code | Attribute Name | SQL DB Data Type | ReportNet3 Data Type | Properties | Code list | Related table(s) |
 |---|---|---|---|---|---|---|
 | ADJ_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  |
-| ADJ_02 | AttainmentId | varchar(50) | string | PK |  | [ComplianceAssessmentMethod](ComplianceAssessmentMethod.md) |
+| ADJ_02 | AttainmentId | varchar(100) | string | PK |  | [ComplianceAssessmentMethod](ComplianceAssessmentMethod.md) |
 | ADJ_03 | AdjustmentSource | varchar(50) | string | PK | [adjustmentsourcetype](https://dd.eionet.europa.eu/vocabulary/aq/adjustmentsourcetype/view) |  |
-| ADJ_04 | AdjustmentAssessmentMethodId | varchar(50) | string |  |  | [ModelObjectiveEstimation](ModelObjectiveEstimation.md) |
+| ADJ_04 | AdjustmentAssessmentMethodId | varchar(100) | string |  |  | [ModelObjectiveEstimation](ModelObjectiveEstimation.md) |
 | ADJ_05 | AdjustmentDocumentId |  |  |  |  | [Documentation](Documentation.md) |
 
 ## Attribute details
@@ -118,7 +118,7 @@ It will be cross-checked against the Model table, also - indirectly - against th
 ADJ_01 | CountryCode | DU | varchar(2) | string | ✓ | ✓
 ADJ_02 | AttainmentId | ATT_ZON_DU000B_00005_LV_H_aMean_2024_1 | varchar(50) | string | ✓ | 
 ADJ_03 | AdjustmentSource | H | varchar(50) | string | ✓ | ✓
-ADJ_04 | AdjustmentAssessmentMethodId | OBE_DU_SEASALT_PM10_H_LV_ADJ | varchar(50) | string |  | 
+ADJ_04 | AdjustmentAssessmentMethodId | OBE_DU_SEASALT_PM10_H_LV_ADJ | varchar(100) | string |  | 
 ADJ_05 | AdjustmentDocumentId | null |  |  |  | 
 
 **Legend:** PK = Primary Key; FK = Foreign Key; CL = Code List.

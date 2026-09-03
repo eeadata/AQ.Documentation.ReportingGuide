@@ -59,13 +59,17 @@ Deletion of an existing record will be possible via the Deletion attribute (by r
 | MEA_07 | MeasureType | varchar(50) | string |  | [measuretype](https://dd.eionet.europa.eu/vocabulary/aq/measuretype/view) |  |
 | MEA_08 | SourceSector | varchar(50) | string |  | [sourcesectors](https://dd.eionet.europa.eu/vocabulary/aq/sourcesectors/view) |  |
 | MEA_09 | SpatialScale | varchar(50) | string |  | [spatialscale](https://dd.eionet.europa.eu/vocabulary/aq/spatialscale/view) |  |
-| MEA_10 | ImplementationBegin | date | datetime |  |  |  |
-| MEA_11 | ImplementationEnd | date | datetime |  |  |  |
+| MEA_10 | ImplementationBegin | date | date |  |  |  |
+| MEA_11 | ImplementationEnd | date | date |  |  |  |
 | MEA_12 | MeasureCost | decimal(18,2) | numeric |  |  |  |
-| MEA_13 | FullEffectDate | date | datetime |  |  |  |
+| MEA_13 | FullEffectDate | date | date |  |  |  |
 | MEA_14 | MeasureStatus | varchar(50) | string |  | [measureimplementationstatus](https://dd.eionet.europa.eu/vocabulary/aq/measureimplementationstatus/view) |  |
 | MEA_15 | ReasonIfMeasureNotUsed | varchar(50) | string |  | [reasonifmeasurenotused](https://dd.eionet.europa.eu/vocabulary/aq/reasonifmeasurenotused) |  |
 | MEA_16 | Deletion | bit | boolean |  |  |  |
+
+```{note}
+Attributes with ReportNet3 data type `date` or `datetime` shall use the ISO 8601 format. Date-time values may include a local UTC offset.
+```
 
 ## Attribute details
 
@@ -254,10 +258,10 @@ MEA_06 | MeasureClassification | emissioncontrol | varchar(50) | string |  | ✓
 MEA_07 | MeasureType | outside | varchar(50) | string |  | ✓
 MEA_08 | SourceSector | industry | varchar(50) | string |  | ✓
 MEA_09 | SpatialScale | local | varchar(50) | string |  | ✓
-MEA_10 | ImplementationBegin | 01-02-2025 | date | datetime |  | 
-MEA_11 | ImplementationEnd | 31-12-2027 | date | datetime |  | 
+MEA_10 | ImplementationBegin | 2025-02-01 | date | date |  |
+MEA_11 | ImplementationEnd | 2027-12-31 | date | date |  |
 MEA_12 | MeasureCost | null | decimal(18,2) | numeric |  | 
-MEA_13 | FullEffectDate | null | date | datetime |  | 
+MEA_13 | FullEffectDate | null | date | date |  |
 MEA_14 | MeasureStatus | implementation | varchar(50) | string |  | ✓
 MEA_15 | ReasonIfMeasureNotUsed | null | varchar(50) | string |  | ✓
 MEA_16 | Deletion | 0 | bit | boolean |  | 

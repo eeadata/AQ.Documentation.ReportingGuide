@@ -79,7 +79,7 @@ Country or territory ISO2 code.
 
 Identifier of the source apportionment, given by data provider.
 
-### SAP_03 – ContributionType
+### SAP_03 – Contribution Type
 
 
 **Reference**
