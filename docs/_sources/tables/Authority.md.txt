@@ -33,6 +33,7 @@ Data products for public will present the records with active AuthorityStatus an
 
 Data products for reporters will present the records with active AuthorityStatus and the latest ReportingTime for each unique combination of CountryCode, AuthorityInstanceId, AuthorityRole and Email, including PersonName.
 
+
 ## EEA extensions
 
 Authority table will be extended by EEA by several attributes:

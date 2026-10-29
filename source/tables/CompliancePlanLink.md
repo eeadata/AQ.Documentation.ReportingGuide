@@ -59,7 +59,7 @@ Deletion of an existing record will be also possible via the Deletion attribute 
 | CPL_09 | PlanBeginDate | date | date |  |  |  |
 | CPL_10 | PlanEndDate | date | date |  |  |  |
 | CPL_11 | PlanDocumentId | varchar(150) | string |  |  | [Documentation](Documentation.md) |
-| CPL_12 | Deletion | char(1) | string |  |  |  |
+| CPL_12 | Deletion | char(1) | string |  | [Deletion](http://dd.eionet.europa.eu/vocabulary/aq/deletion/) |  |
 
 ```{note}
 Attributes with ReportNet3 data type `date` or `datetime` shall use the ISO 8601 format. Date-time values may include a local UTC offset.
@@ -223,7 +223,7 @@ CPL_08 | PlanAdoptionDate | 2025-11-28 | date | date |  |
 CPL_09 | PlanBeginDate | 2026-01-01 | date | date |  |
 CPL_10 | PlanEndDate | 2030-12-31 | date | date |  |
 CPL_11 | PlanDocumentId | DOC_ZON_DU000B_00005_LV_H_daysAbove | varchar(150) | string |  | 
-CPL_12 | Deletion | N | char(1) | string |  | 
+CPL_12 | Deletion | N | char(1) | string |  | ✓ 
 
 **Legend:** PK = Primary Key; CL = Code List.
 

@@ -97,11 +97,11 @@ It will be cross-checked against PlanScenario table.
 
 **Content**
 
-Classification of the scenario (e.g., baseline, projection).
+Classification of the scenario.
 
 **Remarks**
 
-ScenarioCategory: baseline or projection. It should be included in the composite PK in the next iteration of schema version.
+ScenarioCategory: baseline, compliance, reference. It should be included in the composite PK in the next iteration of schema version.
 
 **In Reference**
 

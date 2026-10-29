@@ -57,7 +57,7 @@ Deletion of an existing record will be possible via the Deletion attribute (by r
 | MEA_03 | MeasureId | varchar(200) | string | PK |  |  |
 | MEA_04 | MeasureNationalCode | varchar(100) | string |  |  |  |
 | MEA_05 | MeasureName | varchar(150) | string |  |  |  |
-| MEA_06 | MeasureClassification | varchar(50) | string |  | [measureclassification](https://dd.eionet.europa.eu/vocabulary/aq/measureclassification/view) |  |
+| MEA_06 | MeasureClassification | varchar(50) | string |  | [measureclassification - recast](http://dd.eionet.europa.eu/vocabulary/aq/measureclassification2024recast/) |  |
 | MEA_07 | MeasureType | varchar(50) | string |  | [measuretype](https://dd.eionet.europa.eu/vocabulary/aq/measuretype/view) |  |
 | MEA_08 | SourceSector | varchar(50) | string |  | [sourcesectors](https://dd.eionet.europa.eu/vocabulary/aq/sourcesectors/view) |  |
 | MEA_09 | SpatialScale | varchar(50) | string |  | [spatialscale](https://dd.eionet.europa.eu/vocabulary/aq/spatialscale/view) |  |
@@ -67,7 +67,7 @@ Deletion of an existing record will be possible via the Deletion attribute (by r
 | MEA_13 | FullEffectDate | date | date |  |  |  |
 | MEA_14 | MeasureStatus | varchar(50) | string |  | [measureimplementationstatus](https://dd.eionet.europa.eu/vocabulary/aq/measureimplementationstatus/view) |  |
 | MEA_15 | ReasonIfMeasureNotUsed | varchar(50) | string |  | [reasonifmeasurenotused](https://dd.eionet.europa.eu/vocabulary/aq/reasonifmeasurenotused) |  |
-| MEA_16 | Deletion | char(1) | string |  |  |  |
+| MEA_16 | Deletion | char(1) | string |  | [Deletion](http://dd.eionet.europa.eu/vocabulary/aq/deletion/) |  |
 
 ```{note}
 Attributes with ReportNet3 data type `date` or `datetime` shall use the ISO 8601 format. Date-time values may include a local UTC offset.
@@ -282,7 +282,7 @@ MEA_12 | MeasureCost | null | bigint | numeric |  |
 MEA_13 | FullEffectDate | null | date | date |  |
 MEA_14 | MeasureStatus | implementation | varchar(50) | string |  | ✓
 MEA_15 | ReasonIfMeasureNotUsed | null | varchar(50) | string |  | ✓
-MEA_16 | Deletion | N | char(1) | string |  | 
+MEA_16 | Deletion | N | char(1) | string |  | ✓
 
 **Legend:** PK = Primary Key; CL = Code List.
 

@@ -53,7 +53,7 @@ Records in SourceApportionment table which do not have any correspondence to Pla
 |---|---|---|---|---|---|---|
 | SAP_01 | CountryCode | varchar(2) | string | PK | [countries](https://dd.eionet.europa.eu/vocabulary/common/countries) |  |
 | SAP_02 | SourceApportionmentId | varchar(100) | string | PK |  | [ComplianceAssessmentMethod](ComplianceAssessmentMethod.md) |
-| SAP_03 | ComponentType | varchar(20) | string | PK | [contributiontype](https://dd.eionet.europa.eu/vocabulary/aq/contributiontype/view) |  |
+| SAP_03 | ComponentType | varchar(20) | string | PK | [componenttype](https://dd.eionet.europa.eu/vocabulary/aq/componenttype) |  |
 | SAP_04 | SpatialScale | varchar(50) | string | PK | [spatialscale](https://dd.eionet.europa.eu/vocabulary/aq/spatialscale) |  |
 | SAP_05 | SourceSector | varchar(50) | string | PK | [sourcesectors](https://dd.eionet.europa.eu/vocabulary/aq/sourcesectors) |  |
 | SAP_06 | PollutantId | int | numeric |  | [pollutant](https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view) |  |

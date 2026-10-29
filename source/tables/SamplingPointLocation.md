@@ -52,8 +52,8 @@ In case where the LocationBegin was reported wrongly and/or the corresponding re
 | SPL_04 | LocationEnd | datetime | datetime |  |  |  |
 | SPL_05 | StationArea | varchar(50) | string |  | [areaclassification](https://dd.eionet.europa.eu/vocabulary/aq/areaclassification/view) |  |
 | SPL_06 | SamplingPointCategory | varchar(50) | string |  | [samplingpointcategory](https://dd.eionet.europa.eu/vocabulary/aq/samplingpointcategory) |  |
-| SPL_07 | Hotspot | char(1) | string |  |  |  |
-| SPL_08 | Supersite | char(1) | string |  |  |  |
+| SPL_07 | Hotspot | char(1) | string |  | [hotspot](https://dd.eionet.europa.eu/vocabulary/aq/hotspot/view) |  |
+| SPL_08 | Supersite | char(1) | string |  | [supersite](https://dd.eionet.europa.eu/vocabulary/aq/supersite/view) |  |
 | SPL_09 | Latitude | decimal(9,6) | numeric |  |  |  |
 | SPL_10 | Longitude | decimal(9,6) | numeric |  |  |  |
 | SPL_11 | Altitude | decimal(10,1) | numeric |  |  |  |
@@ -160,7 +160,7 @@ Indicator if the measurement site is considered as a hotspot.
 
 **Remarks**
 
-Y/N.
+Y/N/X
 
 Hotspot relates to the provisions of the recasted Air Quality Directive 2024/2881, Article 4(27) and others.
 
@@ -177,7 +177,7 @@ Indicator if the measurement site is classified as a "Super Site" for advanced m
 
 **Remarks**
 
-Y/N.
+Y/N/X
 
 **In Reference**
 
@@ -270,8 +270,8 @@ SPL_03 | LocationBegin | 2013-06-25T00:00 | datetime | datetime | ✓ |
 SPL_04 | LocationEnd | null | datetime | datetime |  | 
 SPL_05 | StationArea | urban | varchar(50) | string |  | ✓
 SPL_06 | SamplingPointCategory | background | varchar(50) | string |  | ✓
-SPL_07 | Hotspot | N | char(1) | string |  | 
-SPL_08 | Supersite | N | char(1) | string |  | 
+SPL_07 | Hotspot | N | char(1) | string |  | ✓ |
+SPL_08 | Supersite | N | char(1) | string |  | ✓ |
 SPL_09 | Latitude | 43.60625 | decimal(9,6) | numeric |  | 
 SPL_10 | Longitude | 33.093242 | decimal(9,6) | numeric |  | 
 SPL_11 | Altitude | 21 | decimal(10,1) | numeric |  | 

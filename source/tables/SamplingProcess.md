@@ -60,8 +60,8 @@ In case where the same, e.g. DataQualityDocumentId, was used for all records and
 | SPP_05 | ProcessActivityEnd | datetime | datetime |  |  |  |
 | SPP_06 | PollutantId | int | numeric |  | [pollutant](https://dd.eionet.europa.eu/vocabulary/aq/pollutant/view) |  |
 | SPP_07 | MeasurementType | varchar(50) | string |  | [measurementtype](https://dd.eionet.europa.eu/vocabulary/aq/measurementtype/view) |  |
-| SPP_08 | Method | varchar(50) | string |  | [measurementmethod](https://dd.eionet.europa.eu/vocabulary/aq/measurementmethod/view) |  |
-| SPP_09 | Equipment | varchar(50) | string |  | [measurementequipment](https://dd.eionet.europa.eu/vocabulary/aq/measurementequipment/view) |  |
+| SPP_08 | Method | varchar(50) | string |  | [samplingprocessmethod](https://dd.eionet.europa.eu/vocabulary/aq/samplingprocessmethod/view/view) |  |
+| SPP_09 | Equipment | varchar(50) | string |  | [samplingprocessequipment](https://dd.eionet.europa.eu/vocabulary/aq/samplingprocessequipment/view) |  |
 | SPP_10 | AnalyticalTechnique | varchar(50) | string |  | [analyticaltechnique](https://dd.eionet.europa.eu/vocabulary/aq/analyticaltechnique/view) |  |
 | SPP_11 | EquivalenceDemonstrated | varchar(20) | string |  | [equivalencedemonstrated](https://dd.eionet.europa.eu/vocabulary/aq/equivalencedemonstrated) |  |
 | SPP_12 | DataQualityDocumentId | varchar(150) | string |  |  | [Documentation](Documentation.md) |

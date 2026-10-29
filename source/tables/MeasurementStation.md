@@ -57,7 +57,7 @@ Station without active sampling points will be flagged for deletion in the refer
 | STA_05 | NetworkOrganisationalLevel | varchar(20) | string |  | [administrativelevel](https://dd.eionet.europa.eu/vocabulary/aq/administrativelevel/view) |  |
 | STA_06 | Timezone | varchar(20) | string |  | [timezone](https://dd.eionet.europa.eu/vocabulary/aq/timezone) |  |
 | STA_07 | StationNationalCode | varchar(50) | string |  |  |  |
-| STA_08 | StationName | varchar(50) | string |  |  |  |
+| STA_08 | StationName | varchar(100) | string |  |  |  |
 | STA_09 | NetworkDocumentId | varchar(150) | string |  |  | [Documentation](Documentation.md) |
 
 ## Attribute details
@@ -190,7 +190,7 @@ STA_04 | NetworkName | Dustovia Capital | varchar(150) | string |  |
 STA_05 | NetworkOrganisationalLevel | regional | varchar(20) | string |  | ✓
 STA_06 | Timezone | UTC-01 | varchar(20) | string |  | ✓
 STA_07 | StationNationalCode | DU01_01 | varchar(50) | string |  | 
-STA_08 | StationName | Rivny-Suburb-A | varchar(50) | string |  | 
+STA_08 | StationName | Rivny-Suburb-A | varchar(100) | string |  | 
 STA_09 | NetworkDocumentId | DOC_NET_DU01 | varchar(150) | string |  | 
 
 **Legend:** PK = Primary Key; CL = Code List.

@@ -79,7 +79,7 @@ Records in AssessmentRegimeZone table which do not have any correspondence to re
 | ARZ_12 | ReportingMetric | varchar(50) | string |  | [reportingmetric](https://dd.eionet.europa.eu/vocabulary/aq/reportingmetric/view) |  |
 | ARZ_13 | AssessmentThresholdExceedance | varchar(20) | string |  | [assessmentthresholdexceedance](https://dd.eionet.europa.eu/vocabulary/aq/assessmentthresholdexceedance/view) |  |
 | ARZ_14 | PostponementYear | int | numeric |  |  |  |
-| ARZ_15 | FixedMeasurementReduction | char(1) | string |  |  |  |
+| ARZ_15 | FixedMeasurementReduction | char(1) | string |  | [fixedmeasurementreduction](https://dd.eionet.europa.eu/vocabulary/aq/fixedmeasurementreduction) |  |
 | ARZ_16 | ZoneResidentPopulationYear | int | numeric |  |  |  |
 | ARZ_17 | ZoneResidentPopulation | int | numeric |  |  |  |
 | ARZ_18 | ClassificationYear | int | numeric |  |  |  |
@@ -263,7 +263,7 @@ Use of indicative measurements and/or modelling to reduce fixed measurement netw
 
 **Remarks**
 
-Y/N.
+Y/N/X
 
 FixedMeasurementReduction relates to the reduction of the number of sampling points for fixed measurements, which may be reduced by up to 50% under certain conditions as foreseen in the recasted Air Quality Directive 2024/2881 art. 9 §3.
 
@@ -333,7 +333,7 @@ ARZ_11 | ObjectiveType | LV | varchar(50) | string |  | ✓
 ARZ_12 | ReportingMetric | aMean | varchar(50) | string |  | ✓
 ARZ_13 | AssessmentThresholdExceedance | aboveUAT | varchar(20) | string |  | ✓
 ARZ_14 | PostponementYear | null | int | numeric |  | 
-ARZ_15 | FixedMeasurementReduction | N | char(1) | string |  | 
+ARZ_15 | FixedMeasurementReduction | N | char(1) | string |  | ✓ | 
 ARZ_16 | ZoneResidentPopulationYear | 2020 | int | numeric |  | 
 ARZ_17 | ZoneResidentPopulation | 599159 | int | numeric |  | 
 ARZ_18 | ClassificationYear | 2021 | int | numeric |  | 
