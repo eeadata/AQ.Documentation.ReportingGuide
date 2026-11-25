@@ -22,6 +22,7 @@ The following identifiers must follow the format specified in this guide:
 * AssessmentRegimeId
 * SamplingPointReferenceId
 * AttainmentId
+* SpatialRepresentativenessId
 * ScenarioId
 
 ### Partially mandatory identifier formats
@@ -42,10 +43,8 @@ For readability and easier interpretation, it is strongly recommended to use mea
 | NET    | Network                    |
 | DOC    | Document                   |
 | SAP    | Source Apportionment       |
-| SRS    | Spatial Representativeness |
 | EXC    | Exceedance Extent          |
 | PLA    | Plan                       |
-| SCE    | Scenario                   |
 | MOD    | Model                      |
 | OBE    | Objective Estimation       |
 
@@ -128,7 +127,7 @@ ATT_<ZoneId>_<PollutantId>_<ObjectiveType>_<ProtectionTarget>_<ReportingMetric>_
 Example:
 
 ```text
-ATT_ZON_DU000A_00005_LV_H_aMean_2024_1
+ATT_ZON_DU000A_0005_LV_H_aMean_2024_1
 ```
 
 | Element          | Description                                  |
@@ -141,6 +140,54 @@ ATT_ZON_DU000A_00005_LV_H_aMean_2024_1
 | ReportingMetric  | Reporting metric                             |
 | ReportingYear    | Reporting year                               |
 | Index            | Sequential number                            |
+
+## SpatialRepresentativenessId
+
+**Referenced in:** CAM_15
+
+- SRSId must be provided for each sampling point OR exceedance in the Compliance Assessment Method table
+
+Mandatory format:
+
+```text
+SRS_<SamplingPointId>_<ReportingMetric>_<ReportingYear>
+```
+
+Example:
+
+```text
+SRS_DU0002_0005_100_daysAbove_2024
+```
+
+| Element          | Description                                        |
+| ---------------- | -------------------------------------------------- |
+| SRS              | Fixed prefix indicating spatial representativeness |
+| SamplingPointId  | Sampling point identifier                          |
+| ReportingMetric  | Reporting metric                                   |
+| ReportingYear    | Reporting year                                     |
+
+- SRSId must be provided for model indicating exceedance in the Compliance Assessment Method table
+
+Mandatory format:
+
+```text
+SRS_<ZoneId>_<PollutantId>_<ReportingMetric>_<ReportingYear>_<Index>
+```
+
+Example:
+
+```text
+SRS_DU000B_00005_daysAbove_2024_1
+```
+
+| Element          | Description                                        |
+| ---------------- | -------------------------------------------------- |
+| SRS              | Fixed prefix indicating spatial representativeness |
+| ZoneId           | Air quality zone identifier                        |
+| PollutantId      | Pollutant code                                     |
+| ReportingMetric  | Reporting metric                                   |
+| ReportingYear    | Reporting year                                     |
+| Index            | Sequential number                                  |
 
 ## ScenarioId
 
@@ -155,7 +202,7 @@ SCE_<ZoneId>_<PollutantId>_<ObjectiveType>_<ProtectionTarget>_<ReportingMetric>_
 Example:
 
 ```text
-SCE_ZON_DU000B_00005_LV_H_daysAbove_1
+SCE_ZON_DU000B_0005_LV_H_daysAbove_1
 ```
 
 | Element          | Description                      |
@@ -208,7 +255,7 @@ PLA_
 Example:
 
 ```text
-PLA_ZON_DU000B_00005_LV_H_daysAbove
+PLA_ZON_DU000B_0005_LV_H_daysAbove
 ```
 
 | Element            | Description                    |

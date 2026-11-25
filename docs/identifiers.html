@@ -45,11 +45,12 @@
 
     <nav class="aura-sites" aria-label="AURA websites">
 
-      <a href="https://aqportal.discomap.eea.europa.eu/">portal</a>
+      <a href="https://aqportal.discomap.eea.europa.eu/">Portal</a>
 
-      <span class="aura-current" aria-current="page">reporting guide</span>
+      <span class="aura-current" aria-current="page">Reporting guide</span>
 
-      <a href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/">reference guide</a>
+      <a href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/">Reference guide</a>
+      <a href="https://eeadata.github.io/AQ.Documentation.AggregationGuide/">Data aggregation guide</a>
 
     </nav>
 
@@ -174,9 +175,10 @@
 <li><p><a class="reference internal" href="#assessmentregimeid" id="id7">AssessmentRegimeId</a></p></li>
 <li><p><a class="reference internal" href="#samplingpointreferenceid" id="id8">SamplingPointReferenceId</a></p></li>
 <li><p><a class="reference internal" href="#attainmentid" id="id9">AttainmentId</a></p></li>
-<li><p><a class="reference internal" href="#scenarioid" id="id10">ScenarioId</a></p></li>
-<li><p><a class="reference internal" href="#assessmentmethodid-for-models-and-obe" id="id11">AssessmentMethodId for models and OBE</a></p></li>
-<li><p><a class="reference internal" href="#planid" id="id12">PlanId</a></p></li>
+<li><p><a class="reference internal" href="#spatialrepresentativenessid" id="id10">SpatialRepresentativenessId</a></p></li>
+<li><p><a class="reference internal" href="#scenarioid" id="id11">ScenarioId</a></p></li>
+<li><p><a class="reference internal" href="#assessmentmethodid-for-models-and-obe" id="id12">AssessmentMethodId for models and OBE</a></p></li>
+<li><p><a class="reference internal" href="#planid" id="id13">PlanId</a></p></li>
 </ul>
 </nav>
 <section id="description">
@@ -194,6 +196,7 @@
 <li><p>AssessmentRegimeId</p></li>
 <li><p>SamplingPointReferenceId</p></li>
 <li><p>AttainmentId</p></li>
+<li><p>SpatialRepresentativenessId</p></li>
 <li><p>ScenarioId</p></li>
 </ul>
 </section>
@@ -225,17 +228,11 @@
 <tr class="row-even"><td><p>SAP</p></td>
 <td><p>Source Apportionment</p></td>
 </tr>
-<tr class="row-odd"><td><p>SRS</p></td>
-<td><p>Spatial Representativeness</p></td>
-</tr>
-<tr class="row-even"><td><p>EXC</p></td>
+<tr class="row-odd"><td><p>EXC</p></td>
 <td><p>Exceedance Extent</p></td>
 </tr>
-<tr class="row-odd"><td><p>PLA</p></td>
+<tr class="row-even"><td><p>PLA</p></td>
 <td><p>Plan</p></td>
-</tr>
-<tr class="row-even"><td><p>SCE</p></td>
-<td><p>Scenario</p></td>
 </tr>
 <tr class="row-odd"><td><p>MOD</p></td>
 <td><p>Model</p></td>
@@ -346,7 +343,7 @@
 </pre></div>
 </div>
 <p>Example:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ATT_ZON_DU000A_00005_LV_H_aMean_2024_1
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ATT_ZON_DU000A_0005_LV_H_aMean_2024_1
 </pre></div>
 </div>
 <table class="docutils align-default">
@@ -383,15 +380,89 @@
 </tbody>
 </table>
 </section>
+<section id="spatialrepresentativenessid">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">SpatialRepresentativenessId</a><a class="headerlink" href="#spatialrepresentativenessid" title="Link to this heading"></a></h2>
+<p><strong>Referenced in:</strong> CAM_15</p>
+<ul class="simple">
+<li><p>SRSId must be provided for each sampling point OR exceedance in the Compliance Assessment Method table</p></li>
+</ul>
+<p>Mandatory format:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>SRS_&lt;SamplingPointId&gt;_&lt;ReportingMetric&gt;_&lt;ReportingYear&gt;
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>SRS_DU0002_0005_100_daysAbove_2024
+</pre></div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Element</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SRS</p></td>
+<td><p>Fixed prefix indicating spatial representativeness</p></td>
+</tr>
+<tr class="row-odd"><td><p>SamplingPointId</p></td>
+<td><p>Sampling point identifier</p></td>
+</tr>
+<tr class="row-even"><td><p>ReportingMetric</p></td>
+<td><p>Reporting metric</p></td>
+</tr>
+<tr class="row-odd"><td><p>ReportingYear</p></td>
+<td><p>Reporting year</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>SRSId must be provided for model indicating exceedance in the Compliance Assessment Method table</p></li>
+</ul>
+<p>Mandatory format:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>SRS_&lt;ZoneId&gt;_&lt;PollutantId&gt;_&lt;ReportingMetric&gt;_&lt;ReportingYear&gt;_&lt;Index&gt;
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>SRS_DU000B_00005_daysAbove_2024_1
+</pre></div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Element</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SRS</p></td>
+<td><p>Fixed prefix indicating spatial representativeness</p></td>
+</tr>
+<tr class="row-odd"><td><p>ZoneId</p></td>
+<td><p>Air quality zone identifier</p></td>
+</tr>
+<tr class="row-even"><td><p>PollutantId</p></td>
+<td><p>Pollutant code</p></td>
+</tr>
+<tr class="row-odd"><td><p>ReportingMetric</p></td>
+<td><p>Reporting metric</p></td>
+</tr>
+<tr class="row-even"><td><p>ReportingYear</p></td>
+<td><p>Reporting year</p></td>
+</tr>
+<tr class="row-odd"><td><p>Index</p></td>
+<td><p>Sequential number</p></td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="scenarioid">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">ScenarioId</a><a class="headerlink" href="#scenarioid" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">ScenarioId</a><a class="headerlink" href="#scenarioid" title="Link to this heading"></a></h2>
 <p><strong>Referenced in:</strong> PSC_03, CPL_04</p>
 <p>Mandatory format:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>SCE_&lt;ZoneId&gt;_&lt;PollutantId&gt;_&lt;ObjectiveType&gt;_&lt;ProtectionTarget&gt;_&lt;ReportingMetric&gt;_&lt;Index&gt;
 </pre></div>
 </div>
 <p>Example:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>SCE_ZON_DU000B_00005_LV_H_daysAbove_1
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>SCE_ZON_DU000B_0005_LV_H_daysAbove_1
 </pre></div>
 </div>
 <table class="docutils align-default">
@@ -426,7 +497,7 @@
 </table>
 </section>
 <section id="assessmentmethodid-for-models-and-obe">
-<h2><a class="toc-backref" href="#id11" role="doc-backlink">AssessmentMethodId for models and OBE</a><a class="headerlink" href="#assessmentmethodid-for-models-and-obe" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">AssessmentMethodId for models and OBE</a><a class="headerlink" href="#assessmentmethodid-for-models-and-obe" title="Link to this heading"></a></h2>
 <p><strong>Referenced in:</strong> MOE_02</p>
 <p>Partially mandatory format.</p>
 <p>Recommended prefixes:</p>
@@ -456,7 +527,7 @@ OBE_DU_SEASALT_PM10_H_LV_ADJ
 </table>
 </section>
 <section id="planid">
-<h2><a class="toc-backref" href="#id12" role="doc-backlink">PlanId</a><a class="headerlink" href="#planid" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">PlanId</a><a class="headerlink" href="#planid" title="Link to this heading"></a></h2>
 <p><strong>Referenced in:</strong> CPL_03</p>
 <p>Partially mandatory format.</p>
 <p>Recommended prefix:</p>
@@ -464,7 +535,7 @@ OBE_DU_SEASALT_PM10_H_LV_ADJ
 </pre></div>
 </div>
 <p>Example:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>PLA_ZON_DU000B_00005_LV_H_daysAbove
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>PLA_ZON_DU000B_0005_LV_H_daysAbove
 </pre></div>
 </div>
 <table class="docutils align-default">

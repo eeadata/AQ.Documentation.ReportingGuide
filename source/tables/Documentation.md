@@ -44,6 +44,7 @@ Records in Document table which do not have any correspondence (via DocumentId) 
 | DOC_03 | DocumentType | varchar(50) | string | PK | [documenttype](https://dd.eionet.europa.eu/vocabulary/aq/documenttype) |  |
 | DOC_04 | DocumentId | varchar(150) | string | PK |  | [MeasurementStation](MeasurementStation.md)<br>[SamplingProcess](SamplingProcess.md)<br>[ModelObjectiveEstimation](ModelObjectiveEstimation.md)<br>[AssessmentRegimeZone](AssessmentRegimeZone.md)<br>[CompliancePlanLink](CompliancePlanLink.md)<br>[SourceApportionment](SourceApportionment.md)<br>[PollutionLevelAdjustment](PollutionLevelAdjustment.md) |
 | DOC_05 | DocumentAttachment | varchar(100) | attachment (R3 data type) |  |  |  |
+| DOC_06 | DocumentOriginalURL | varchar(250) | string |  |  |  |
 
 ## Attribute details
 
@@ -97,6 +98,12 @@ Identifier of the document given by data provider.
 
 Attached document PDF.
 
+### DOC_06 – DocumentOriginalURL
+
+**Content**
+
+URL where document can be fetched from by the EEA at the time of reporting.
+
 ## Example
 
 | Attribute Code | Attribute Name | Example | SQL DB Data Type | ReportNet3 Data Type | PK | CL |
@@ -106,6 +113,7 @@ DOC_02 | DataTable | Station | varchar(50) | string | ✓ | ✓
 DOC_03 | DocumentType | NetworkDocument | varchar(50) | string | ✓ | ✓
 DOC_04 | DocumentId | DOC_NET_DU01 | varchar(150) | string | ✓ | 
 DOC_05 | DocumentAttachment | DUS_NET_DU01.pdf | varchar(100) | attachment (R3 data type) |  | 
+DOC_06 | DocumentOriginalURL | www.dea.dustovia.dus/aq/doc/DUS_NET_DU01.pdf | varchar(250) | string |  | 
 
 **Legend:** PK = Primary Key; CL = Code List.
 

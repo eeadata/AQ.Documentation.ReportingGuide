@@ -45,11 +45,12 @@
 
     <nav class="aura-sites" aria-label="AURA websites">
 
-      <a href="https://aqportal.discomap.eea.europa.eu/">portal</a>
+      <a href="https://aqportal.discomap.eea.europa.eu/">Portal</a>
 
-      <span class="aura-current" aria-current="page">reporting guide</span>
+      <span class="aura-current" aria-current="page">Reporting guide</span>
 
-      <a href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/">reference guide</a>
+      <a href="https://eeadata.github.io/AQ.Documentation.ReferenceGuidePilot/">Reference guide</a>
+      <a href="https://eeadata.github.io/AQ.Documentation.AggregationGuide/">Data aggregation guide</a>
 
     </nav>
 
@@ -176,9 +177,10 @@
 <li><p><a class="reference internal" href="#doc-03-documenttype" id="id8">DOC_03 – DocumentType</a></p></li>
 <li><p><a class="reference internal" href="#doc-04-documentid" id="id9">DOC_04 – DocumentId</a></p></li>
 <li><p><a class="reference internal" href="#doc-05-documentattachment" id="id10">DOC_05 – DocumentAttachment</a></p></li>
+<li><p><a class="reference internal" href="#doc-06-documentoriginalurl" id="id11">DOC_06 – DocumentOriginalURL</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#example" id="id11">Example</a></p></li>
+<li><p><a class="reference internal" href="#example" id="id12">Example</a></p></li>
 </ul>
 </nav>
 <section id="description">
@@ -257,6 +259,14 @@ Data products for public and reporters will present the records with the latest 
 <td><p></p></td>
 <td><p></p></td>
 </tr>
+<tr class="row-odd"><td><p>DOC_06</p></td>
+<td><p>DocumentOriginalURL</p></td>
+<td><p>varchar(250)</p></td>
+<td><p>string</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -295,9 +305,14 @@ Data products for public and reporters will present the records with the latest 
 <p><strong>Content</strong></p>
 <p>Attached document PDF.</p>
 </section>
+<section id="doc-06-documentoriginalurl">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">DOC_06 – DocumentOriginalURL</a><a class="headerlink" href="#doc-06-documentoriginalurl" title="Link to this heading"></a></h3>
+<p><strong>Content</strong></p>
+<p>URL where document can be fetched from by the EEA at the time of reporting.</p>
+</section>
 </section>
 <section id="example">
-<h2><a class="toc-backref" href="#id11" role="doc-backlink">Example</a><a class="headerlink" href="#example" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Example</a><a class="headerlink" href="#example" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Attribute Code</p></th>
@@ -347,6 +362,14 @@ Data products for public and reporters will present the records with the latest 
 <td><p>DUS_NET_DU01.pdf</p></td>
 <td><p>varchar(100)</p></td>
 <td><p>attachment (R3 data type)</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>DOC_06</p></td>
+<td><p>DocumentOriginalURL</p></td>
+<td><p>www.dea.dustovia.dus/aq/doc/DUS_NET_DU01.pdf</p></td>
+<td><p>varchar(250)</p></td>
+<td><p>string</p></td>
 <td><p></p></td>
 <td><p></p></td>
 </tr>
